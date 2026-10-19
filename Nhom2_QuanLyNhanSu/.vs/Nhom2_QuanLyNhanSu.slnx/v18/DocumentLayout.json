@@ -1,0 +1,953 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\services\\interfaces\\iprintservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\services\\interfaces\\iprintservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\services\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\services\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\services\\interfaces\\iworkhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\services\\interfaces\\iworkhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\services\\interfaces\\icontractservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\services\\interfaces\\icontractservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\services\\interfaces\\ipositionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\services\\interfaces\\ipositionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\services\\interfaces\\idepartmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\services\\interfaces\\idepartmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\services\\interfaces\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\services\\interfaces\\iemployeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\repositories\\workhistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\repositories\\workhistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\repositories\\contractrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\repositories\\contractrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\services\\printservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\services\\printservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\services\\workhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\services\\workhistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\services\\contractservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\services\\contractservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\presenters\\accountpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\presenters\\accountpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\presenters\\workhistorypresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\presenters\\workhistorypresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\presenters\\contractpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\presenters\\contractpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\presenters\\employeedetailpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\presenters\\employeedetailpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\interfaces\\iaccountview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\interfaces\\iaccountview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\interfaces\\icontractview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\interfaces\\icontractview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\interfaces\\iworkhistoryview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\interfaces\\iworkhistoryview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\interfaces\\iemployeedetailview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\interfaces\\iemployeedetailview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\forms\\frmaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\forms\\frmaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\forms\\frmworkhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\forms\\frmworkhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\forms\\frmprintpreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\forms\\frmprintpreview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\forms\\frmemployeedetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\forms\\frmemployeedetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\forms\\frmcontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\forms\\frmcontract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\models\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\models\\workhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\models\\workhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\repositories\\accountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\repositories\\positionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\repositories\\positionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\presenters\\positionpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\presenters\\positionpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\presenters\\departmentpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\presenters\\departmentpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\presenters\\employeepresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\presenters\\employeepresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\presenters\\mainpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\presenters\\mainpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\presenters\\loginpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\presenters\\loginpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\interfaces\\ipositionview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\interfaces\\ipositionview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\interfaces\\idepartmentview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\interfaces\\idepartmentview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\interfaces\\iemployeeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\interfaces\\iemployeeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\interfaces\\iloginview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\interfaces\\iloginview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\interfaces\\imainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\interfaces\\imainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\forms\\frmposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\forms\\frmposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\forms\\frmdepartment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\forms\\frmdepartment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\forms\\frmemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\forms\\frmemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\forms\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\models\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\models\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|g:\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\nhom2_quanlynhansu\\views\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DA60448A-F345-476C-831B-AD1253F022B1}|Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu.csproj|solutionrelative:nhom2_quanlynhansu\\views\\forms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IPrintService.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IPrintService.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IPrintService.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IPrintService.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IPrintService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:53:31.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IAccountService.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IAccountService.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IAccountService.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IAccountService.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IAccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:53:21.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IWorkHistoryService.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IWorkHistoryService.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IWorkHistoryService.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IWorkHistoryService.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IWorkHistoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:53:10.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IContractService.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IContractService.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IContractService.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IContractService.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IContractService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:53:03.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IPositionService.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IPositionService.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IPositionService.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IPositionService.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IPositionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:52:50.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IDepartmentService.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IDepartmentService.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IDepartmentService.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IDepartmentService.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IDepartmentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:52:43.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IEmployeeService.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IEmployeeService.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IEmployeeService.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IEmployeeService.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IEmployeeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:52:36.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IAuthService.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Services\\Interfaces\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:52:25.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WorkHistoryRepository.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Repositories\\WorkHistoryRepository.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Repositories\\WorkHistoryRepository.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Repositories\\WorkHistoryRepository.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Repositories\\WorkHistoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:51:21.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ContractRepository.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Repositories\\ContractRepository.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Repositories\\ContractRepository.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Repositories\\ContractRepository.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Repositories\\ContractRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:50:48.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\AccountService.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Services\\AccountService.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\AccountService.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Services\\AccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:48:17.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PrintService.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\PrintService.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Services\\PrintService.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\PrintService.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Services\\PrintService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:47:35.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WorkHistoryService.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\WorkHistoryService.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Services\\WorkHistoryService.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\WorkHistoryService.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Services\\WorkHistoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:47:21.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ContractService.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\ContractService.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Services\\ContractService.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\ContractService.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Services\\ContractService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:47:13.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AccountPresenter.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Presenters\\AccountPresenter.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Presenters\\AccountPresenter.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Presenters\\AccountPresenter.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Presenters\\AccountPresenter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:46:19.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "WorkHistoryPresenter.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Presenters\\WorkHistoryPresenter.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Presenters\\WorkHistoryPresenter.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Presenters\\WorkHistoryPresenter.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Presenters\\WorkHistoryPresenter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:46:09.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ContractPresenter.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Presenters\\ContractPresenter.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Presenters\\ContractPresenter.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Presenters\\ContractPresenter.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Presenters\\ContractPresenter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:45:59.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EmployeeDetailPresenter.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Presenters\\EmployeeDetailPresenter.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Presenters\\EmployeeDetailPresenter.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Presenters\\EmployeeDetailPresenter.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Presenters\\EmployeeDetailPresenter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:45:48.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IAccountView.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IAccountView.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IAccountView.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IAccountView.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IAccountView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:44:42.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IContractView.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IContractView.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IContractView.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IContractView.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IContractView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:44:28.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IWorkHistoryView.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IWorkHistoryView.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IWorkHistoryView.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IWorkHistoryView.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IWorkHistoryView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:44:14.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IEmployeeDetailView.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IEmployeeDetailView.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IEmployeeDetailView.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IEmployeeDetailView.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IEmployeeDetailView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:43:59.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FrmAccount.cs [Design]",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmAccount.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmAccount.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmAccount.cs [Design]",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmAccount.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:41:43.444Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FrmWorkHistory.cs [Design]",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmWorkHistory.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmWorkHistory.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmWorkHistory.cs [Design]",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmWorkHistory.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:41:10.545Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FrmPrintPreview.cs [Design]",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmPrintPreview.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmPrintPreview.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmPrintPreview.cs [Design]",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmPrintPreview.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:39:30.189Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FrmEmployeeDetail.cs [Design]",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmEmployeeDetail.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmEmployeeDetail.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmEmployeeDetail.cs [Design]",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmEmployeeDetail.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:38:02.741Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "FrmContract.cs [Design]",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmContract.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmContract.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmContract.cs [Design]",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmContract.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:36:14.595Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Contract.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Models\\Contract.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Models\\Contract.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Models\\Contract.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Models\\Contract.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:33:05.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "WorkHistory.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Models\\WorkHistory.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Models\\WorkHistory.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Models\\WorkHistory.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Models\\WorkHistory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T12:31:57.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AccountRepository.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Repositories\\AccountRepository.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Repositories\\AccountRepository.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Repositories\\AccountRepository.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Repositories\\AccountRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T11:28:31.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "PositionRepository.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Repositories\\PositionRepository.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Repositories\\PositionRepository.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Repositories\\PositionRepository.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Repositories\\PositionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T11:27:55.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "DepartmentRepository.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Repositories\\DepartmentRepository.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Repositories\\DepartmentRepository.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Repositories\\DepartmentRepository.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Repositories\\DepartmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T11:27:46.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "EmployeeRepository.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Repositories\\EmployeeRepository.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Repositories\\EmployeeRepository.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Repositories\\EmployeeRepository.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Repositories\\EmployeeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T11:27:21.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Services\\AuthService.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\AuthService.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Services\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T11:25:15.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "DepartmentService.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\DepartmentService.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Services\\DepartmentService.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\DepartmentService.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Services\\DepartmentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T11:23:55.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Services\\EmployeeService.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Services\\EmployeeService.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Services\\EmployeeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T11:19:42.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "PositionPresenter.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Presenters\\PositionPresenter.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Presenters\\PositionPresenter.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Presenters\\PositionPresenter.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Presenters\\PositionPresenter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T11:13:15.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "DepartmentPresenter.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Presenters\\DepartmentPresenter.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Presenters\\DepartmentPresenter.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Presenters\\DepartmentPresenter.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Presenters\\DepartmentPresenter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T11:13:00.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "EmployeePresenter.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Presenters\\EmployeePresenter.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Presenters\\EmployeePresenter.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Presenters\\EmployeePresenter.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Presenters\\EmployeePresenter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T11:12:47.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "MainPresenter.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Presenters\\MainPresenter.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Presenters\\MainPresenter.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Presenters\\MainPresenter.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Presenters\\MainPresenter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T11:12:37.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "LoginPresenter.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Presenters\\LoginPresenter.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Presenters\\LoginPresenter.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Presenters\\LoginPresenter.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Presenters\\LoginPresenter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T11:12:26.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IPositionView.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IPositionView.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IPositionView.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IPositionView.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IPositionView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T11:02:33.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "IDepartmentView.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IDepartmentView.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IDepartmentView.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IDepartmentView.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IDepartmentView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T11:02:24.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "IEmployeeView.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IEmployeeView.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IEmployeeView.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IEmployeeView.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IEmployeeView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T11:02:14.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ILoginView.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Interfaces\\ILoginView.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Interfaces\\ILoginView.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Interfaces\\ILoginView.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Interfaces\\ILoginView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T11:02:01.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "IMainView.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IMainView.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IMainView.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IMainView.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Interfaces\\IMainView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T11:01:46.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "FrmPosition.cs [Design]",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmPosition.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmPosition.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmPosition.cs [Design]",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmPosition.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T10:56:50.409Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "FrmDepartment.cs [Design]",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmDepartment.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmDepartment.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmDepartment.cs [Design]",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmDepartment.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T10:56:35.873Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "FrmEmployee.cs [Design]",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmEmployee.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmEmployee.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmEmployee.cs [Design]",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmEmployee.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T10:56:07.726Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "FrmLogin.cs [Design]",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmLogin.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmLogin.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmLogin.cs [Design]",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T10:54:22.271Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Account.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Models\\Account.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Models\\Account.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Models\\Account.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Models\\Account.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T10:31:26.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Position.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Models\\Position.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Models\\Position.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Models\\Position.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Models\\Position.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T10:27:42.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Department.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Models\\Department.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Models\\Department.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Models\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T10:27:30.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Models\\Employee.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Models\\Employee.cs",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T10:25:58.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "FrmMain.cs [Design]",
+              "DocumentMoniker": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmMain.cs",
+              "RelativeDocumentMoniker": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmMain.cs",
+              "ToolTip": "G:\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmMain.cs [Design]",
+              "RelativeToolTip": "Nhom2_QuanLyNhanSu\\Views\\Forms\\FrmMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-19T10:08:23.313Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

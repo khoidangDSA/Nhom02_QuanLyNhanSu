@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="=Models Mô tả DL\" />
+    <Folder Include="=Views Hiển thị DL\" />
+    <Folder Include="=Interface quy định những gì Presenter có thể lấy từ thư mục cha\" />
+    <Folder Include="=Presenters nhận thao tác và điều phối\" />
+    <Folder Include="=Services kiểm tra dữ liệu và xử lý nghiệp vụ\" />
+    <Folder Include="=Repositories thực hiện thao tác với SQL Server\" />
+  </ItemGroup>
+
+</Project>
