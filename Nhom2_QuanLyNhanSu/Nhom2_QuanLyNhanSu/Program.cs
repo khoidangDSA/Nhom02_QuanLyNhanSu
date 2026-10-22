@@ -1,3 +1,8 @@
+using Nhom2_QuanLyNhanSu.Presenters;
+using Nhom2_QuanLyNhanSu.Repositories;
+using Nhom2_QuanLyNhanSu.Services;
+using Nhom2_QuanLyNhanSu.Views.Forms;
+
 namespace Nhom2_QuanLyNhanSu
 {
     internal static class Program
@@ -11,7 +16,9 @@ namespace Nhom2_QuanLyNhanSu
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FrmMain());
+
+            Application.Run(new FrmDepartment());
+            
         }
     }
 }

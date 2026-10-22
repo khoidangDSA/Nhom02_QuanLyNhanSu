@@ -17,4 +17,11 @@
     <Folder Include="=Repositories thực hiện thao tác với SQL Server\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp" Version="6.6.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.1" />
+    <PackageReference Include="ReaLTaiizor" Version="3.8.2.1" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="10.0.13" />
+  </ItemGroup>
+
 </Project>
