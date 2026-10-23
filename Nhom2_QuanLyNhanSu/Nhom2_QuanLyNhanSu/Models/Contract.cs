@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Nhom2_QuanLyNhanSu.Models
 {
-    internal class Contract
+    public class Contract
     {
         public int Id { get; set; }
         public int EmployeeId { get; set; }

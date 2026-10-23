@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Nhom2_QuanLyNhanSu.Models
 {
-    internal class WorkHistory
+    public class WorkHistory
     {
         public int Id { get; set; }
         public int EmployeeId { get; set; }

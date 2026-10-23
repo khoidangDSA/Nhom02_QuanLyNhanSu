@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Nhom2_QuanLyNhanSu.Models
 {
-    internal class Position
+    public class Position
     {
         public int Id { get; set; }
         public string Code { get; set; } = string.Empty;

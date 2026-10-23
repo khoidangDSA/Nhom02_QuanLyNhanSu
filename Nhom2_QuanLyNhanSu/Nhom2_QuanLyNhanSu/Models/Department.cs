@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
+using Nhom2_QuanLyNhanSu.Models.Filters;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace Nhom2_QuanLyNhanSu.Models
 {
-    internal class Department
+    public class Department
     {
         public int Id { get; set; }
         public string Code { get; set; } = string.Empty;

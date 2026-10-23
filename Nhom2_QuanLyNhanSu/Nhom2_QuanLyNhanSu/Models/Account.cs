@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Nhom2_QuanLyNhanSu.Models
 {
-    internal class Account
+    public class Account
     {
         public int Id { get; set; }
         public string Username { get; set; } = string.Empty;

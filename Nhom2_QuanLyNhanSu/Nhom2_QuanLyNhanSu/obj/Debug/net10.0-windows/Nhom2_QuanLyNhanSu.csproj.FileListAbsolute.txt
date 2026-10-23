@@ -66,3 +66,4 @@ G:\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\bin\Debug\net10.0-wi
 G:\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\bin\Debug\net10.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 G:\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\bin\Debug\net10.0-windows\FontAwesome.Sharp.dll
 G:\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\bin\Debug\net10.0-windows\ReaLTaiizor.dll
+G:\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\obj\Debug\net10.0-windows\Nhom2_QuanLyNhanSu.Properties.Resources.resources
