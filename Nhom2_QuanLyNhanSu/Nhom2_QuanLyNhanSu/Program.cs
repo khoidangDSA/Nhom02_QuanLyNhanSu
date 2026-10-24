@@ -22,19 +22,25 @@ namespace Nhom2_QuanLyNhanSu
             //ApplicationConfiguration.Initialize();
 
             //Application.Run(new FrmDepartment());
-            IDepartmentRepository repo = new DepartmentRepository();
+            //    IDepartmentRepository repo = new DepartmentRepository();
 
             // 2. Khởi tạo Service (chứa logic nghiệp vụ)
-            IDepartmentService service = new DepartmentService(repo);
+            //    IDepartmentService service = new DepartmentService(repo);
 
             // 3. Khởi tạo Form View
-            var form = new FrmDepartment();
+            //   var form = new FrmDepartment();
 
             // 4. Khởi tạo Presenter kết nối View với Service
-            var presenter = new DepartmentPresenter(form, service);
+            //  var presenter = new DepartmentPresenter(form, service);
 
             // 5. Chạy ứng dụng
-            Application.Run(form);
+            // Application.Run(form);
+            var repo = new PositionRepository();
+            var service = new PositionService(repo);
+            var view = new FrmPosition();
+            var presenter = new PositionPresenter(view, service);
+
+            Application.Run(view);
 
         }
     }
