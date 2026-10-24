@@ -1,4 +1,4 @@
 Tiến độ hiện tại
-- Xong Database (Tùy theo máy, chỉnh trong phần App.config và DbConnectionFactory.cs)
+- Xong Database (Tùy theo máy, chỉnh App.config và DbConnectionFactory.cs)
 - Xong full phần Department
 - Xong full phần Position
