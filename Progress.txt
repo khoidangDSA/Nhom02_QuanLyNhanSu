@@ -3,4 +3,18 @@ Tiến độ hiện tại
 - Xong full phần Department
 - Xong full phần Position
 - Xong Database (Tùy theo máy, chỉnh App.config và DbConnectionFactory.cs)
+- Code xong phần login, có 2 thứ là hr và admin 
+  + Đăng nhập:
+    + Tài khoản: admin, mật khẩu: admin123
+    + Tài khoản: hr, mật khẩu: hr123
+  + Admin và hr sẽ có những điểm chung và khác như sau:
+  + Chức năng	HR
+    + Quản lý nhân viên (thêm, sửa, tìm kiếm)	Có	
+    + Quản lý hợp đồng, quá trình công tác	Có	
+    + Quản lý phòng ban, chức vụ	Có	Chỉ xem (hoặc không)
+    + Xóa nhân viên		Không
+    + Quản lý tài khoản (tạo, khóa, đặt lại mật khẩu)		Không
+
+  + Còn admin thì có hết các chức năng
+  + Mọi sự khác biệt về phân quyền giữa admin và hr sẽ code trong form main chứ hiện tại chưa có sự phân quyền 
 
