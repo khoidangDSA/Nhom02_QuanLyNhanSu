@@ -5,7 +5,7 @@ Tiến độ hiện tại
 
 - Xong full phần Position (Chức vụ)
 
-- Xong Database (Tùy theo máy, chỉnh App.config và DbConnectionFactory.cs)
+- Xong Database (Tùy theo máy, chỉnh thì chỉnh trong App.config và DbConnectionFactory.cs)
 
 - Code xong phần login, có 2 thứ là hr và admin, có giao diện sáng tối
   + Đăng nhập:
