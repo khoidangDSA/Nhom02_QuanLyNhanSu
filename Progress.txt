@@ -1,9 +1,9 @@
 Tiến độ hiện tại
 - Tạo xong cấu trúc thư mục dạng MVP
 
-- Xong full phần Department
+- Xong full phần Department (Phòng ban)
 
-- Xong full phần Position
+- Xong full phần Position (Chức vụ)
 
 - Xong Database (Tùy theo máy, chỉnh App.config và DbConnectionFactory.cs)
 
