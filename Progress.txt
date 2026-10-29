@@ -3,7 +3,7 @@ Tiến độ hiện tại
 - Xong full phần Department
 - Xong full phần Position
 - Xong Database (Tùy theo máy, chỉnh App.config và DbConnectionFactory.cs)
-- Code xong phần login, có 2 thứ là hr và admin 
+- Code xong phần login, có 2 thứ là hr và admin, có giao diện sáng tối
   + Đăng nhập:
     + Tài khoản: admin, mật khẩu: admin123
     + Tài khoản: hr, mật khẩu: hr123
