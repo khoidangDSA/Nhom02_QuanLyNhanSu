@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Nhom2_QuanLyNhanSu.Models;
 
-namespace Nhom2_QuanLyNhanSu.Services.Interfaces
+namespace Nhom2_QuanLyNhanSu.Services.Interfaces;
+
+public interface IAuthService
 {
-    internal class IAuthService
-    {
-    }
+    Account Login(string username, string password);
+    void EnsureDefaultAccounts();
 }

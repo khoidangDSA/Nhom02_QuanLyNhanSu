@@ -1,4 +1,4 @@
-﻿namespace Nhom2_QuanLyNhanSu.Models.Filters;
+﻿namespace Nhom2_QuanLyNhanSu.Models.Enums;
 
 public enum AccountRole
 {

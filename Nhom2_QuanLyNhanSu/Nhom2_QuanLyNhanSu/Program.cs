@@ -35,11 +35,25 @@ namespace Nhom2_QuanLyNhanSu
 
             // 5. Chạy ứng dụng
             // Application.Run(form);
+            /**
             var repo = new PositionRepository();
             var service = new PositionService(repo);
             var view = new FrmPosition();
             var presenter = new PositionPresenter(view, service);
 
+            Application.Run(view);
+            **/
+            var auth = new AuthService(new AccountRepository());
+            auth.EnsureDefaultAccounts();
+
+            var loginView = new FrmLogin();
+            _ = new LoginPresenter(loginView, auth);
+
+            if (loginView.ShowDialog() != DialogResult.OK) return;
+
+            // Tạm thời mở Phòng ban (sau này thay bằng FrmMain)
+            var view = new FrmDepartment();
+            _ = new DepartmentPresenter(view, new DepartmentService(new DepartmentRepository()));
             Application.Run(view);
 
         }

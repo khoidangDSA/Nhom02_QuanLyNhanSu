@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace Nhom2_QuanLyNhanSu.Views.Interfaces;
 
-namespace Nhom2_QuanLyNhanSu.Views.Interfaces
+public interface ILoginView
 {
-    internal interface ILoginView
-    {
-    }
+    string Username { get; }
+    string Password { get; }
+
+    event EventHandler LoginRequested;
+
+    void ShowError(string message);
+    void CloseWithSuccess();
 }

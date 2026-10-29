@@ -8,7 +8,6 @@ G:\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\obj\Debug\net10.0-wi
 G:\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\obj\Debug\net10.0-windows\Nhom2_QuanLyNhanSu.Views.Forms.FrmDepartment.resources
 G:\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\obj\Debug\net10.0-windows\Nhom2_QuanLyNhanSu.Views.Forms.FrmEmployee.resources
 G:\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\obj\Debug\net10.0-windows\Nhom2_QuanLyNhanSu.Views.Forms.FrmEmployeeDetail.resources
-G:\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\obj\Debug\net10.0-windows\Nhom2_QuanLyNhanSu.Presenters.Forms.FrmLogin.resources
 G:\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\obj\Debug\net10.0-windows\Nhom2_QuanLyNhanSu.FrmMain.resources
 G:\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\obj\Debug\net10.0-windows\Nhom2_QuanLyNhanSu.Views.Forms.FrmPosition.resources
 G:\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\obj\Debug\net10.0-windows\Nhom2_QuanLyNhanSu.Views.Forms.FrmPrintPreview.resources
@@ -67,3 +66,4 @@ G:\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\bin\Debug\net10.0-wi
 G:\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\bin\Debug\net10.0-windows\FontAwesome.Sharp.dll
 G:\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\bin\Debug\net10.0-windows\ReaLTaiizor.dll
 G:\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\obj\Debug\net10.0-windows\Nhom2_QuanLyNhanSu.Properties.Resources.resources
+G:\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\Nhom2_QuanLyNhanSu\obj\Debug\net10.0-windows\Nhom2_QuanLyNhanSu.Views.Forms.FrmLogin.resources
