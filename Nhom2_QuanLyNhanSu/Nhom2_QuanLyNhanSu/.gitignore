@@ -1,0 +1,6 @@
+# Thư mục build
+bin/
+obj/
+# File cấu hình người dùng cá nhân
+.user
+.suo
