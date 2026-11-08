@@ -13,12 +13,10 @@ namespace Nhom2_QuanLyNhanSu.Views.Forms
 
         private void InitializeComponent()
         {
-            pnlHeader = new Panel();
-            lblTitle = new Label();
             pnlSearch = new Panel();
             txtSearch = new TextBox();
             btnSearch = new Button();
-            pnlInput = new Panel();
+            pnlCard = new Panel();
             lblCode = new Label();
             txtCode = new TextBox();
             lblName = new Label();
@@ -31,241 +29,263 @@ namespace Nhom2_QuanLyNhanSu.Views.Forms
             btnUpdate = new Button();
             btnDelete = new Button();
             btnClear = new Button();
+            pnlGrid = new Panel();
             dgvPosition = new DataGridView();
-            pnlHeader.SuspendLayout();
             pnlSearch.SuspendLayout();
-            pnlInput.SuspendLayout();
+            pnlCard.SuspendLayout();
+            pnlGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPosition).BeginInit();
             SuspendLayout();
             // 
-            // pnlHeader
+            // pnlSearch (Khu vực tìm kiếm)
             // 
-            pnlHeader.BackColor = Color.FromArgb(30, 41, 59);
-            pnlHeader.Controls.Add(lblTitle);
-            pnlHeader.Dock = DockStyle.Top;
-            pnlHeader.Location = new Point(0, 0);
-            pnlHeader.Name = "pnlHeader";
-            pnlHeader.Size = new Size(1009, 56);
-            pnlHeader.TabIndex = 3;
-            // 
-            // lblTitle
-            // 
-            lblTitle.Dock = DockStyle.Fill;
-            lblTitle.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            lblTitle.ForeColor = Color.White;
-            lblTitle.Location = new Point(0, 0);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Padding = new Padding(20, 0, 0, 0);
-            lblTitle.Size = new Size(1009, 56);
-            lblTitle.TabIndex = 0;
-            lblTitle.Text = "QUẢN LÝ CHỨC VỤ";
-            lblTitle.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // pnlSearch
-            // 
-            pnlSearch.Controls.Add(txtSearch);
+            pnlSearch.BackColor = Color.FromArgb(248, 250, 252);
             pnlSearch.Controls.Add(btnSearch);
+            pnlSearch.Controls.Add(txtSearch);
             pnlSearch.Dock = DockStyle.Top;
-            pnlSearch.Location = new Point(0, 56);
+            pnlSearch.Location = new Point(0, 0);
             pnlSearch.Name = "pnlSearch";
-            pnlSearch.Size = new Size(1009, 64);
-            pnlSearch.TabIndex = 2;
+            pnlSearch.Size = new Size(1009, 65);
+            pnlSearch.TabIndex = 0;
             // 
-            // txtSearch
+            // txtSearch: Kéo dài tự động theo kích thước form
             // 
-            txtSearch.Anchor = AnchorStyles.None;
-            txtSearch.Font = new Font("Segoe UI", 11F);
-            txtSearch.Location = new Point(29, 16);
+            txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtSearch.BorderStyle = BorderStyle.FixedSingle;
+            txtSearch.Font = new Font("Segoe UI", 11.5F);
+            txtSearch.Location = new Point(20, 15);
             txtSearch.Name = "txtSearch";
             txtSearch.PlaceholderText = "Tìm theo mã hoặc tên chức vụ...";
-            txtSearch.Size = new Size(770, 37);
+            txtSearch.Size = new Size(829, 33);
             txtSearch.TabIndex = 0;
             // 
-            // btnSearch
+            // btnSearch: Chiều cao đồng bộ với thanh tìm kiếm, bám góc phải
             // 
-            btnSearch.Anchor = AnchorStyles.None;
-            btnSearch.Image = Properties.Resources.search2;
-            btnSearch.Location = new Point(819, 12);
+            btnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSearch.BackColor = Color.FromArgb(37, 99, 235);
+            btnSearch.Cursor = Cursors.Hand;
+            btnSearch.FlatAppearance.BorderSize = 0;
+            btnSearch.FlatStyle = FlatStyle.Flat;
+            btnSearch.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnSearch.ForeColor = Color.White;
+            btnSearch.Location = new Point(859, 15);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(160, 41);
+            btnSearch.Size = new Size(130, 33);
             btnSearch.TabIndex = 1;
-            btnSearch.Text = "Tìm kiếm";
-            btnSearch.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnSearch.Text = "TÌM KIẾM";
+            btnSearch.UseVisualStyleBackColor = false;
             // 
-            // pnlInput
+            // pnlGrid (Chứa bảng dữ liệu)
             // 
-            pnlInput.BackColor = Color.White;
-            pnlInput.Controls.Add(lblCode);
-            pnlInput.Controls.Add(txtCode);
-            pnlInput.Controls.Add(lblName);
-            pnlInput.Controls.Add(txtName);
-            pnlInput.Controls.Add(lblAllowance);
-            pnlInput.Controls.Add(txtAllowance);
-            pnlInput.Controls.Add(lblDescription);
-            pnlInput.Controls.Add(txtDescription);
-            pnlInput.Controls.Add(btnAdd);
-            pnlInput.Controls.Add(btnUpdate);
-            pnlInput.Controls.Add(btnDelete);
-            pnlInput.Controls.Add(btnClear);
-            pnlInput.Location = new Point(0, 408);
-            pnlInput.Name = "pnlInput";
-            pnlInput.Size = new Size(990, 224);
-            pnlInput.TabIndex = 1;
+            pnlGrid.Controls.Add(dgvPosition);
+            pnlGrid.Dock = DockStyle.Fill;
+            pnlGrid.Location = new Point(0, 65);
+            pnlGrid.Name = "pnlGrid";
+            pnlGrid.Padding = new Padding(20, 10, 20, 15);
+            pnlGrid.Size = new Size(1009, 395);
+            pnlGrid.TabIndex = 1;
+            // 
+            // dgvPosition
+            // 
+            dgvPosition.BackgroundColor = Color.White;
+            dgvPosition.BorderStyle = BorderStyle.FixedSingle;
+            dgvPosition.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPosition.Dock = DockStyle.Fill;
+            dgvPosition.Location = new Point(20, 10);
+            dgvPosition.Name = "dgvPosition";
+            dgvPosition.RowHeadersWidth = 51;
+            dgvPosition.Size = new Size(969, 370);
+            dgvPosition.TabIndex = 0;
+            // 
+            // pnlCard (Panel nhập thông tin phía dưới)
+            // 
+            pnlCard.BackColor = Color.White;
+            pnlCard.Controls.Add(lblCode);
+            pnlCard.Controls.Add(txtCode);
+            pnlCard.Controls.Add(lblName);
+            pnlCard.Controls.Add(txtName);
+            pnlCard.Controls.Add(lblAllowance);
+            pnlCard.Controls.Add(txtAllowance);
+            pnlCard.Controls.Add(lblDescription);
+            pnlCard.Controls.Add(txtDescription);
+            pnlCard.Controls.Add(btnAdd);
+            pnlCard.Controls.Add(btnUpdate);
+            pnlCard.Controls.Add(btnDelete);
+            pnlCard.Controls.Add(btnClear);
+            pnlCard.Dock = DockStyle.Bottom;
+            pnlCard.Location = new Point(0, 460);
+            pnlCard.Name = "pnlCard";
+            pnlCard.Size = new Size(1009, 215);
+            pnlCard.TabIndex = 2;
             // 
             // lblCode
             // 
             lblCode.AutoSize = true;
-            lblCode.Location = new Point(20, 24);
+            lblCode.ForeColor = Color.FromArgb(71, 85, 105);
+            lblCode.Location = new Point(20, 18);
             lblCode.Name = "lblCode";
-            lblCode.Size = new Size(44, 28);
+            lblCode.Size = new Size(85, 19);
             lblCode.TabIndex = 0;
-            lblCode.Text = "Mã:";
+            lblCode.Text = "Mã chức vụ:";
             // 
             // txtCode
             // 
-            txtCode.Location = new Point(110, 20);
+            txtCode.BorderStyle = BorderStyle.FixedSingle;
+            txtCode.Location = new Point(20, 42);
             txtCode.MaxLength = 20;
             txtCode.Name = "txtCode";
-            txtCode.Size = new Size(220, 34);
+            txtCode.Size = new Size(200, 27);
             txtCode.TabIndex = 1;
             // 
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Location = new Point(360, 24);
+            lblName.ForeColor = Color.FromArgb(71, 85, 105);
+            lblName.Location = new Point(240, 18);
             lblName.Name = "lblName";
-            lblName.Size = new Size(45, 28);
+            lblName.Size = new Size(86, 19);
             lblName.TabIndex = 2;
-            lblName.Text = "Tên:";
+            lblName.Text = "Tên chức vụ:";
             // 
             // txtName
             // 
             txtName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtName.Location = new Point(411, 24);
+            txtName.BorderStyle = BorderStyle.FixedSingle;
+            txtName.Location = new Point(240, 42);
             txtName.MaxLength = 100;
             txtName.Name = "txtName";
-            txtName.Size = new Size(540, 34);
+            txtName.Size = new Size(420, 27);
             txtName.TabIndex = 3;
             // 
             // lblAllowance
             // 
+            lblAllowance.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblAllowance.AutoSize = true;
-            lblAllowance.Location = new Point(20, 68);
+            lblAllowance.ForeColor = Color.FromArgb(71, 85, 105);
+            lblAllowance.Location = new Point(680, 18);
             lblAllowance.Name = "lblAllowance";
-            lblAllowance.Size = new Size(85, 28);
+            lblAllowance.Size = new Size(62, 19);
             lblAllowance.TabIndex = 4;
             lblAllowance.Text = "Phụ cấp:";
             // 
             // txtAllowance
             // 
-            txtAllowance.Location = new Point(110, 64);
+            txtAllowance.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtAllowance.BorderStyle = BorderStyle.FixedSingle;
+            txtAllowance.Location = new Point(680, 42);
             txtAllowance.MaxLength = 15;
             txtAllowance.Name = "txtAllowance";
             txtAllowance.PlaceholderText = "VD: 3000000";
-            txtAllowance.Size = new Size(220, 34);
+            txtAllowance.Size = new Size(309, 27);
             txtAllowance.TabIndex = 5;
             // 
             // lblDescription
             // 
             lblDescription.AutoSize = true;
-            lblDescription.Location = new Point(20, 112);
+            lblDescription.ForeColor = Color.FromArgb(71, 85, 105);
+            lblDescription.Location = new Point(20, 80);
             lblDescription.Name = "lblDescription";
-            lblDescription.Size = new Size(68, 28);
+            lblDescription.Size = new Size(49, 19);
             lblDescription.TabIndex = 6;
             lblDescription.Text = "Mô tả:";
             // 
             // txtDescription
             // 
             txtDescription.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtDescription.Location = new Point(110, 108);
+            txtDescription.BorderStyle = BorderStyle.FixedSingle;
+            txtDescription.Location = new Point(20, 105);
             txtDescription.MaxLength = 255;
             txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(841, 34);
+            txtDescription.Size = new Size(969, 27);
             txtDescription.TabIndex = 7;
             // 
             // btnAdd
             // 
-            btnAdd.Anchor = AnchorStyles.None;
-            btnAdd.Image = Properties.Resources.circle_plus;
-            btnAdd.Location = new Point(381, 163);
+            btnAdd.BackColor = Color.FromArgb(16, 185, 129);
+            btnAdd.Cursor = Cursors.Hand;
+            btnAdd.FlatAppearance.BorderSize = 0;
+            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            btnAdd.ForeColor = Color.White;
+            btnAdd.Location = new Point(20, 150);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(130, 47);
+            btnAdd.Size = new Size(110, 38);
             btnAdd.TabIndex = 8;
             btnAdd.Text = "Thêm";
-            btnAdd.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAdd.UseVisualStyleBackColor = false;
             // 
             // btnUpdate
             // 
-            btnUpdate.Anchor = AnchorStyles.None;
-            btnUpdate.Image = Properties.Resources.pencil;
-            btnUpdate.Location = new Point(517, 163);
+            btnUpdate.BackColor = Color.FromArgb(245, 158, 11);
+            btnUpdate.Cursor = Cursors.Hand;
+            btnUpdate.FlatAppearance.BorderSize = 0;
+            btnUpdate.FlatStyle = FlatStyle.Flat;
+            btnUpdate.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            btnUpdate.ForeColor = Color.White;
+            btnUpdate.Location = new Point(140, 150);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(130, 47);
+            btnUpdate.Size = new Size(110, 38);
             btnUpdate.TabIndex = 9;
             btnUpdate.Text = "Sửa";
-            btnUpdate.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnUpdate.UseVisualStyleBackColor = false;
             // 
             // btnDelete
             // 
-            btnDelete.Anchor = AnchorStyles.None;
-            btnDelete.Image = Properties.Resources.trash;
-            btnDelete.Location = new Point(653, 163);
+            btnDelete.BackColor = Color.FromArgb(239, 68, 68);
+            btnDelete.Cursor = Cursors.Hand;
+            btnDelete.FlatAppearance.BorderSize = 0;
+            btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            btnDelete.ForeColor = Color.White;
+            btnDelete.Location = new Point(260, 150);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(130, 47);
+            btnDelete.Size = new Size(110, 38);
             btnDelete.TabIndex = 10;
             btnDelete.Text = "Xóa";
-            btnDelete.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnDelete.UseVisualStyleBackColor = false;
             // 
             // btnClear
             // 
-            btnClear.Anchor = AnchorStyles.None;
-            btnClear.Image = Properties.Resources.refresh_cw1;
-            btnClear.Location = new Point(789, 163);
+            btnClear.BackColor = Color.FromArgb(226, 232, 240);
+            btnClear.Cursor = Cursors.Hand;
+            btnClear.FlatAppearance.BorderSize = 0;
+            btnClear.FlatStyle = FlatStyle.Flat;
+            btnClear.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            btnClear.ForeColor = Color.FromArgb(51, 65, 85);
+            btnClear.Location = new Point(380, 150);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(130, 47);
+            btnClear.Size = new Size(110, 38);
             btnClear.TabIndex = 11;
             btnClear.Text = "Làm mới";
-            btnClear.TextImageRelation = TextImageRelation.ImageBeforeText;
-            // 
-            // dgvPosition
-            // 
-            dgvPosition.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPosition.Location = new Point(24, 126);
-            dgvPosition.Name = "dgvPosition";
-            dgvPosition.RowHeadersWidth = 62;
-            dgvPosition.Size = new Size(966, 276);
-            dgvPosition.TabIndex = 4;
+            btnClear.UseVisualStyleBackColor = false;
             // 
             // FrmPosition
             // 
-            AutoScaleDimensions = new SizeF(144F, 144F);
-            AutoScaleMode = AutoScaleMode.Dpi;
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(248, 250, 252);
             ClientSize = new Size(1009, 675);
-            Controls.Add(dgvPosition);
-            Controls.Add(pnlInput);
+            Controls.Add(pnlGrid);
+            Controls.Add(pnlCard);
             Controls.Add(pnlSearch);
-            Controls.Add(pnlHeader);
-            Font = new Font("Segoe UI", 10F);
-            MinimumSize = new Size(820, 560);
+            Font = new Font("Segoe UI", 9.75F);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FrmPosition";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Quản lý chức vụ";
-            pnlHeader.ResumeLayout(false);
             pnlSearch.ResumeLayout(false);
             pnlSearch.PerformLayout();
-            pnlInput.ResumeLayout(false);
-            pnlInput.PerformLayout();
+            pnlCard.ResumeLayout(false);
+            pnlCard.PerformLayout();
+            pnlGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvPosition).EndInit();
             ResumeLayout(false);
         }
 
-        private Panel pnlHeader;
-        private Label lblTitle;
         private Panel pnlSearch;
         private TextBox txtSearch;
         private Button btnSearch;
-        private Panel pnlInput;
+        private Panel pnlCard;
         private Label lblCode;
         private TextBox txtCode;
         private Label lblName;
@@ -278,6 +298,7 @@ namespace Nhom2_QuanLyNhanSu.Views.Forms
         private Button btnUpdate;
         private Button btnDelete;
         private Button btnClear;
+        private Panel pnlGrid;
         private DataGridView dgvPosition;
     }
 }

@@ -1,9 +1,9 @@
-﻿using Nhom2_QuanLyNhanSu.Common.Helpers;
-using Nhom2_QuanLyNhanSu.Models;
-using Nhom2_QuanLyNhanSu.Models.Enums;
-using Nhom2_QuanLyNhanSu.Repositories.Interfaces;
+﻿using System;
+using Nhom2_QuanLyNhanSu.Models;         // Gọi Model Account
+using Nhom2_QuanLyNhanSu.Models.Enums;   // Gọi Enum
+using Nhom2_QuanLyNhanSu.Repositories;   // Sửa lại đường dẫn Repository cho đúng
 using Nhom2_QuanLyNhanSu.Services.Interfaces;
-
+using Nhom2_QuanLyNhanSu.Common.Helpers;
 namespace Nhom2_QuanLyNhanSu.Services;
 
 public class AuthService : IAuthService

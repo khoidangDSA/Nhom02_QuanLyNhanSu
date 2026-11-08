@@ -1,10 +1,18 @@
-﻿using Nhom2_QuanLyNhanSu.Models;
+﻿using System.Collections.Generic;
+using Nhom2_QuanLyNhanSu.Models;
 
-namespace Nhom2_QuanLyNhanSu.Repositories.Interfaces;
-
-public interface IAccountRepository
+namespace Nhom2_QuanLyNhanSu.Repositories
 {
-    Account? GetByUsername(string username);
-    int Count();
-    bool Add(Account account);
+    public interface IAccountRepository
+    {
+        IEnumerable<Account> GetAll();
+        IEnumerable<Account> GetBySearchValue(string searchValue);
+        void Add(Account account);
+        void Edit(Account account);
+        void Delete(string username);
+        void UpdatePassword(string username, string newPassword);
+        bool CheckExists(string username);
+        Account GetByUsername(string username);
+        int Count();
+    }
 }

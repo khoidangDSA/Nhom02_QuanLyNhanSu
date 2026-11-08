@@ -1,12 +1,16 @@
-﻿namespace Nhom2_QuanLyNhanSu.Views.Interfaces;
-
-public interface ILoginView
+﻿namespace Nhom2_QuanLyNhanSu.Views.Interfaces
 {
-    string Username { get; }
-    string Password { get; }
+    public interface ILoginView
+    {
+        string Username { get; }
+        string Password { get; }
 
-    event EventHandler LoginRequested;
+        // 🔥 Bổ sung thêm dòng này để interface nhận diện UserRole
+        string UserRole { get; set; }
 
-    void ShowError(string message);
-    void CloseWithSuccess();
+        void ShowError(string message);
+        void CloseWithSuccess();
+
+        event EventHandler LoginRequested;
+    }
 }

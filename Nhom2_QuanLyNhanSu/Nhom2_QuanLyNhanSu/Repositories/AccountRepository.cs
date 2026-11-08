@@ -1,54 +1,191 @@
-﻿using Microsoft.Data.SqlClient;
-using Nhom2_QuanLyNhanSu.Data;
-using Nhom2_QuanLyNhanSu.Models;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.Data.SqlClient; 
 using Nhom2_QuanLyNhanSu.Models.Enums;
-using Nhom2_QuanLyNhanSu.Repositories.Interfaces;
+using Nhom2_QuanLyNhanSu.Models;
 
-namespace Nhom2_QuanLyNhanSu.Repositories;
-
-public class AccountRepository : IAccountRepository
+namespace Nhom2_QuanLyNhanSu.Repositories
 {
-    public Account? GetByUsername(string username)
+    public class AccountRepository : IAccountRepository
     {
-        using var conn = DbConnectionFactory.Create();
-        using var cmd = new SqlCommand(
-            "SELECT Id, Username, PasswordHash, Role, EmployeeId, IsActive FROM Account WHERE Username=@u", conn);
-        cmd.Parameters.AddWithValue("@u", username);
-        conn.Open();
-        using var rd = cmd.ExecuteReader();
-        if (!rd.Read()) return null;
+        private readonly string _connectionString = @"Server=localhost;Database=QuanLyNhanSu_Nhom2;Trusted_Connection=True;TrustServerCertificate=True;";
 
-        return new Account
+        public IEnumerable<Account> GetAll()
         {
-            Id = rd.GetInt32(0),
-            Username = rd.GetString(1),
-            PasswordHash = rd.GetString(2),
-            Role = (AccountRole)rd.GetInt32(3),
-            EmployeeId = rd.IsDBNull(4) ? null : rd.GetInt32(4),
-            IsActive = rd.GetBoolean(5)
-        };
-    }
+            var list = new List<Account>();
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                conn.Open();
+                string query = "SELECT Username, PasswordHash, Role, MaNV, IsActive FROM Accounts";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            list.Add(new Account
+                            {
+                                Username = reader["Username"].ToString(),
+                                PasswordHash = reader["PasswordHash"].ToString(),
+                                Role = (AccountRole)Convert.ToInt32(reader["Role"]),
+                                MaNV = reader["MaNV"] != DBNull.Value ? reader["MaNV"].ToString() : null,
+                                IsActive = Convert.ToBoolean(reader["IsActive"])
+                            });
+                        }
+                    }
+                }
+            }
+            return list;
+        }
 
-    public int Count()
-    {
-        using var conn = DbConnectionFactory.Create();
-        using var cmd = new SqlCommand("SELECT COUNT(*) FROM Account", conn);
-        conn.Open();
-        return (int)cmd.ExecuteScalar();
-    }
+        public IEnumerable<Account> GetBySearchValue(string searchValue)
+        {
+            var list = new List<Account>();
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                conn.Open();
+                string query = "SELECT Username, PasswordHash, Role, MaNV, IsActive FROM Accounts WHERE Username LIKE @search OR MaNV LIKE @search";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@search", $"%{searchValue}%");
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            list.Add(new Account
+                            {
+                                Username = reader["Username"].ToString(),
+                                PasswordHash = reader["PasswordHash"].ToString(),
+                                Role = (AccountRole)Convert.ToInt32(reader["Role"]),
+                                MaNV = reader["MaNV"] != DBNull.Value ? reader["MaNV"].ToString() : null,
+                                IsActive = Convert.ToBoolean(reader["IsActive"])
+                            });
+                        }
+                    }
+                }
+            }
+            return list;
+        }
 
-    public bool Add(Account a)
-    {
-        using var conn = DbConnectionFactory.Create();
-        using var cmd = new SqlCommand(@"
-            INSERT INTO Account(Username, PasswordHash, Role, EmployeeId, IsActive)
-            VALUES(@u, @p, @r, @e, @a)", conn);
-        cmd.Parameters.AddWithValue("@u", a.Username);
-        cmd.Parameters.AddWithValue("@p", a.PasswordHash);
-        cmd.Parameters.AddWithValue("@r", (int)a.Role);
-        cmd.Parameters.AddWithValue("@e", (object?)a.EmployeeId ?? DBNull.Value);
-        cmd.Parameters.AddWithValue("@a", a.IsActive);
-        conn.Open();
-        return cmd.ExecuteNonQuery() > 0;
+        public void Add(Account account) // Kiểu trả về phải là void để khớp với interface
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                conn.Open();
+                string query = "INSERT INTO Accounts (Username, PasswordHash, Role, MaNV, IsActive) VALUES (@user, @pass, @role, @manv, @active)";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@user", account.Username);
+                    cmd.Parameters.AddWithValue("@pass", account.PasswordHash);
+                    cmd.Parameters.AddWithValue("@role", (int)account.Role);
+                    cmd.Parameters.AddWithValue("@manv", (object)account.MaNV ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@active", account.IsActive);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void Edit(Account account)
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                conn.Open();
+                string query = "UPDATE Accounts SET Role = @role, MaNV = @manv, IsActive = @active WHERE Username = @user";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@user", account.Username);
+                    cmd.Parameters.AddWithValue("@role", (int)account.Role);
+                    cmd.Parameters.AddWithValue("@manv", (object)account.MaNV ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@active", account.IsActive);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void Delete(string username)
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                conn.Open();
+                string query = "DELETE FROM Accounts WHERE Username = @user";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@user", username);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void UpdatePassword(string username, string newPasswordHash)
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                conn.Open();
+                string query = "UPDATE Accounts SET PasswordHash = @pass WHERE Username = @user";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@pass", newPasswordHash);
+                    cmd.Parameters.AddWithValue("@user", username);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public bool CheckExists(string username)
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                conn.Open();
+                string query = "SELECT COUNT(1) FROM Accounts WHERE Username = @user";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@user", username);
+                    int count = (int)cmd.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+        }
+
+        public Account GetByUsername(string username)
+        {
+            Account account = null;
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                conn.Open();
+                string query = "SELECT Username, PasswordHash, Role, MaNV, IsActive FROM Accounts WHERE Username = @user";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@user", username);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            account = new Account
+                            {
+                                Username = reader["Username"].ToString(),
+                                PasswordHash = reader["PasswordHash"].ToString(),
+                                Role = (AccountRole)Convert.ToInt32(reader["Role"]),
+                                MaNV = reader["MaNV"] != DBNull.Value ? reader["MaNV"].ToString() : null,
+                                IsActive = Convert.ToBoolean(reader["IsActive"])
+                            };
+                        }
+                    }
+                }
+            }
+            return account;
+        }
+
+        public int Count()
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                conn.Open();
+                string query = "SELECT COUNT(1) FROM Accounts";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    return (int)cmd.ExecuteScalar();
+                }
+            }
+        }
     }
 }

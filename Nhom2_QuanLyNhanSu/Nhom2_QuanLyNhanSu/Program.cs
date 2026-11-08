@@ -1,3 +1,6 @@
+using System;
+using System.Windows.Forms;
+using Nhom2_QuanLyNhanSu.Data; // Namespace chứa DatabaseInitializer
 using Nhom2_QuanLyNhanSu.Presenters;
 using Nhom2_QuanLyNhanSu.Repositories;
 using Nhom2_QuanLyNhanSu.Repositories.Interfaces;
@@ -15,47 +18,33 @@ namespace Nhom2_QuanLyNhanSu
         [STAThread]
         static void Main()
         {
-            
             Application.SetHighDpiMode(HighDpiMode.PerMonitorV2);
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            //ApplicationConfiguration.Initialize();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
-            //Application.Run(new FrmDepartment());
-            //    IDepartmentRepository repo = new DepartmentRepository();
+            // 1. TỰ ĐỘNG TẠO DATABASE & BẢNG (Chạy đầu tiên để đảm bảo bảng đã tồn tại trong SQL Server)
+            DatabaseInitializer.Initialize();
 
-            // 2. Khởi tạo Service (chứa logic nghiệp vụ)
-            //    IDepartmentService service = new DepartmentService(repo);
-
-            // 3. Khởi tạo Form View
-            //   var form = new FrmDepartment();
-
-            // 4. Khởi tạo Presenter kết nối View với Service
-            //  var presenter = new DepartmentPresenter(form, service);
-
-            // 5. Chạy ứng dụng
-            // Application.Run(form);
-            /**
-            var repo = new PositionRepository();
-            var service = new PositionService(repo);
-            var view = new FrmPosition();
-            var presenter = new PositionPresenter(view, service);
-
-            Application.Run(view);
-            **/
+            // 2. KHỞI TẠO TÀI KHOẢN MẶC ĐỊNH (Admin / HR)
             var auth = new AuthService(new AccountRepository());
             auth.EnsureDefaultAccounts();
 
+            // 3. HIỂN THỊ MÀN HÌNH ĐĂNG NHẬP (FrmLogin)
             var loginView = new FrmLogin();
             _ = new LoginPresenter(loginView, auth);
 
+            // Nếu người dùng tắt form đăng nhập hoặc đăng nhập thất bại thì dừng chương trình
             if (loginView.ShowDialog() != DialogResult.OK) return;
 
-            // Tạm thời mở Phòng ban (sau này thay bằng FrmMain)
-            var view = new FrmDepartment();
-            _ = new DepartmentPresenter(view, new DepartmentService(new DepartmentRepository()));
-            Application.Run(view);
+            // 4. SAU KHI ĐĂNG NHẬP THÀNH CÔNG -> MỞ FORM CHÍNH (FrmMain)
+            // Lấy role của tài khoản vừa đăng nhập thành công từ FrmLogin (hoặc LoginPresenter)
+            string loggedInRole = loginView.LoggedInRole; 
+            var mainView = new FrmMain(loggedInRole);
 
+            // Nếu nhóm của bạn có viết MainPresenter để quản lý sự kiện cho FrmMain, bạn có thể khởi tạo ở đây:
+            // _ = new MainPresenter(mainView, ...); 
+
+            Application.Run(mainView);
         }
     }
 }

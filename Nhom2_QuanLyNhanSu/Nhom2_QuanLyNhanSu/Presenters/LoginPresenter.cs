@@ -22,6 +22,11 @@ public class LoginPresenter
         {
             var account = _service.Login(_view.Username, _view.Password);
             CurrentUser.Set(account);
+
+            // 🔥 Chuyển đổi enum AccountRole thành chuỗi chữ thường để FrmMain nhận diện chính xác
+            // account.Role có thể là AccountRole.Admin hoặc AccountRole.HRStaff
+            _view.UserRole = account.Role.ToString().ToLower(); // Sẽ trả về "admin" hoặc "hrstaff"
+
             _view.CloseWithSuccess();
         }
         catch (InvalidOperationException ex)

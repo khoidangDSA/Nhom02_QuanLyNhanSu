@@ -60,11 +60,11 @@ namespace Nhom2_QuanLyNhanSu.Views.Forms
             {
                 // GIAO DIỆN TỐI (DARK MODE)
                 btnThemeToggle.Text = "☀️";
-                btnThemeToggle.ForeColor = Color.FromArgb(253, 224, 71); // Màu vàng tươi cho mặt trời
-                lblIconHeader.ForeColor = Color.White;                    // Màu trắng cho Tòa nhà 🏢
+                btnThemeToggle.ForeColor = Color.FromArgb(253, 224, 71);
+                lblIconHeader.ForeColor = Color.White;
 
-                BackColor = Color.FromArgb(15, 23, 42);                   // Slate 900
-                pnlCard.BackColor = Color.FromArgb(30, 41, 59);              // Slate 800
+                BackColor = Color.FromArgb(15, 23, 42);
+                pnlCard.BackColor = Color.FromArgb(30, 41, 59);
 
                 lblTitle.ForeColor = Color.White;
                 lblSub.ForeColor = Color.FromArgb(148, 163, 184);
@@ -93,10 +93,10 @@ namespace Nhom2_QuanLyNhanSu.Views.Forms
             {
                 // GIAO DIỆN SÁNG (LIGHT MODE)
                 btnThemeToggle.Text = "🌙";
-                btnThemeToggle.ForeColor = Color.FromArgb(100, 116, 139); // Màu tối cho Mặt trăng
-                lblIconHeader.ForeColor = Color.FromArgb(30, 41, 59);     // Màu tối cho Tòa nhà 🏢
+                btnThemeToggle.ForeColor = Color.FromArgb(100, 116, 139);
+                lblIconHeader.ForeColor = Color.FromArgb(30, 41, 59);
 
-                BackColor = Color.FromArgb(226, 232, 240);                // Slate 200
+                BackColor = Color.FromArgb(226, 232, 240);
                 pnlCard.BackColor = Color.White;
 
                 lblTitle.ForeColor = Color.FromArgb(15, 23, 42);
@@ -126,7 +126,16 @@ namespace Nhom2_QuanLyNhanSu.Views.Forms
 
         public string Username => txtUsername.Text.Trim();
         public string Password => txtPassword.Text;
+        public string UserRole { get; set; } = "hr";
 
+        // Thuộc tính đồng bộ với Program.cs để truyền quyền sang FrmMain
+        public string LoggedInRole
+        {
+            get => UserRole;
+            set => UserRole = value;
+        }
+
+        public string UserIcon { get; set; }
         public event EventHandler? LoginRequested;
 
         public void ShowError(string message)
