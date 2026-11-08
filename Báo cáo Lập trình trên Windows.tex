@@ -1,0 +1,654 @@
+\documentclass[12pt,a4paper]{report}
+
+% --- Ngôn ngữ và Bảng mã tiếng Việt ---
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage{times} % Phông chuẩn Times New Roman
+
+% --- Căn lề chuẩn học thuật (Trái 3.5cm, Phải 2.0cm, Trên 2.0cm, Dưới 2.0cm) ---
+\usepackage[left=3.5cm, right=2.0cm, top=2.0cm, bottom=2.0cm]{geometry}
+
+% --- Các gói hỗ trợ định dạng, bảng biểu, liên kết ---
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{amsmath, amssymb}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+% --- Giãn dòng 1.5 ---
+\onehalfspacing
+\setlength{\parindent}{1.0cm}
+\setlength{\parskip}{6pt}
+
+% --- Cấu hình siêu liên kết Hyperref ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    filecolor=black,
+    urlcolor=blue
+}
+
+% --- Thiết lập Header và Footer ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\slshape Môn: Lập trình trên Windows (COMP1019) - Đề tài: Quản lý Nhân sự}
+\fancyhead[R]{\small\slshape Nhóm 2}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Định dạng tiêu đề chương
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\centering}
+  {\MakeUppercase{\chaptertitlename\ \thechapter}}
+  {10pt}
+  {\Large\MakeUppercase}
+\titlespacing*{\chapter}{0pt}{-20pt}{20pt}
+
+\begin{document}
+
+% ==================== TRANG BÌA ====================
+\begin{titlepage}
+    \begin{center}
+        \textbf{\large BỘ GIÁO DỤC VÀ ĐÀO TẠO}\\[0.2cm]
+        \textbf{\large TRƯỜNG ĐẠI HỌC SƯ PHẠM THÀNH PHỐ HỒ CHÍ MINH}\\[0.2cm]
+        \textbf{\large KHOA CÔNG NGHỆ THÔNG TIN}\\[1.0cm]
+        
+        % Chèn logo trường nếu có (trên Overleaf upload tệp hcmue_logo.png hoặc bỏ chú thích)
+        % \includegraphics[width=4cm]{hcmue_logo.png}\\[1.0cm]
+        \vspace{2.5cm}
+        
+        \textbf{\Large BÀI BÁO CÁO ĐỒ ÁN CUỐI KỲ}\\[0.4cm]
+        \textbf{\large MÔN HỌC: LẬP TRÌNH TRÊN WINDOWS (COMP1019)}\\[1.2cm]
+        
+        \makebox[\textwidth]{\rule{0.8\textwidth}{1.5pt}}\\[0.6cm]
+        {\huge\bfseries ĐỀ TÀI: QUẢN LÝ NHÂN SỰ}\\[0.3cm]
+        {\large\bfseries (ỨNG DỤNG MÔ HÌNH KIẾN TRÚC MODEL -- VIEW -- PRESENTER)}\\[0.6cm]
+        \makebox[\textwidth]{\rule{0.8\textwidth}{1.5pt}}\\[2.0cm]
+        
+        \begin{minipage}[t]{0.45\textwidth}
+            \textbf{Giảng viên hướng dẫn:}\\
+            TS. Lê Thanh Thoại
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.45\textwidth}
+            \textbf{Sinh viên thực hiện (Nhóm 2):}\\
+            Đặng Nguyên Khôi -- 51.01.104.138\\
+            Kiều Gia Bảo -- 51.01.104.128\\
+            Nguyễn Đức Gia Huy
+        \end{minipage}
+        
+        \vfill
+        \textbf{\large THÀNH PHỐ HỒ CHÍ MINH -- NĂM 2026}
+    \end{center}
+\end{titlepage}
+
+% ==================== PHẦN MỞ ĐẦU ĐÁNH SỐ LA MÃ ====================
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+% --- Lời cảm ơn ---
+\chapter*{LỜI CẢM ƠN}
+\addcontentsline{toc}{chapter}{LỜI CẢM ƠN}
+
+Lời đầu tiên, nhóm chúng em xin gửi lời cảm ơn chân thành và sâu sắc nhất đến Trường Đại học Sư phạm TP.HCM, đặc biệt là quý thầy cô Khoa Công nghệ Thông tin đã tạo ra một môi trường học tập chất lượng và cung cấp những kiến thức nền tảng vững chắc cho chúng em trong suốt thời gian qua.
+
+Đặc biệt, nhóm chúng em xin bày tỏ lòng biết ơn sâu sắc đến Thầy Lê Thanh Thoại -- giảng viên phụ trách môn học COMP1019 -- Lập trình trên Windows. Trong suốt quá trình học tập và làm đồ án, Thầy không chỉ truyền đạt những kiến thức chuyên môn quý báu mà còn tận tình hướng dẫn, giải đáp thắc mắc để chúng em có thể hiểu và áp dụng thành công chuẩn kiến trúc phần mềm MVP (Model -- View -- Presenter) vào thực tế. Những định hướng và sự chỉ bảo nhiệt tình của Thầy chính là kim chỉ nam giúp nhóm hoàn thành Đề tài: Quản lý nhân sự bám sát với cấu trúc yêu cầu của môn học.
+
+Trong suốt lộ trình 4 tuần thực hiện đồ án, mặc dù các thành viên đã luôn nỗ lực phối hợp, tìm tòi và hoàn thiện sản phẩm từ khâu thiết kế dữ liệu đến lập trình, nhưng do giới hạn về mặt thời gian cũng như kinh nghiệm thực tiễn, phần mềm và tài liệu báo cáo chắc chắn không tránh khỏi những thiếu sót. Chúng em rất mong nhận được sự thông cảm cũng như những lời nhận xét, góp ý quý báu từ Thầy để nhóm có thể rút kinh nghiệm và hoàn thiện các kỹ năng lập trình của mình trong tương lai.
+
+Sau cùng, chúng em kính chúc Thầy luôn dồi dào sức khỏe, hạnh phúc và gặt hái được nhiều thành công hơn nữa trong sự nghiệp giảng dạy.
+
+\vspace{1.5cm}
+\begin{flushright}
+    \textit{TP. Hồ Chí Minh, ngày 08 tháng 11 năm 2026}\\
+    \textbf{Nhóm sinh viên thực hiện (Nhóm 2)}
+\end{flushright}
+
+\newpage
+
+% --- Mục lục ---
+\tableofcontents
+\newpage
+
+% --- Danh mục chữ viết tắt ---
+\chapter*{DANH MỤC CÁC CHỮ VIẾT TẮT}
+\addcontentsline{toc}{chapter}{DANH MỤC CÁC CHỮ VIẾT TẮT}
+\begin{longtable}{|l|p{11.5cm}|}
+\hline
+\textbf{Chữ viết tắt} & \textbf{Giải nghĩa tiếng Anh / Thuật ngữ chuyên môn} \\ \hline
+\endhead
+ACID & Atomicity, Consistency, Isolation, Durability \\ \hline
+ADO.NET & ActiveX Data Objects for .NET \\ \hline
+BLOB & Binary Large Object \\ \hline
+CLR & Common Language Runtime \\ \hline
+DTO & Data Transfer Object \\ \hline
+FCL & Framework Class Library \\ \hline
+FK & Foreign Key (Khóa ngoại) \\ \hline
+FR & Functional Requirements (Yêu cầu chức năng) \\ \hline
+HR & Human Resources (Nhân sự) \\ \hline
+HRM & Human Resource Management (Quản trị nguồn nhân lực) \\ \hline
+LINQ & Language Integrated Query \\ \hline
+MDI & Multiple Document Interface \\ \hline
+MSIL & Microsoft Intermediate Language \\ \hline
+MVP & Model -- View -- Presenter \\ \hline
+NFR & Non-Functional Requirements (Yêu cầu phi chức năng) \\ \hline
+OOP & Object-Oriented Programming (Lập trình hướng đối tượng) \\ \hline
+PK & Primary Key (Khóa chính) \\ \hline
+POCO & Plain Old CLR Object \\ \hline
+RBAC & Role-Based Access Control (Kiểm soát truy cập theo vai trò) \\ \hline
+RDBMS & Relational Database Management System \\ \hline
+RDLC & Report Definition Language Client-side \\ \hline
+SRP & Single Responsibility Principle (Nguyên lý đơn nhiệm) \\ \hline
+T-SQL & Transact-Structured Query Language \\ \hline
+UI/UX & User Interface / User Experience \\ \hline
+\end{longtable}
+
+\newpage
+
+% ==================== NỘI DUNG CHÍNH (ĐÁNH SỐ 1, 2, 3...) ====================
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% ==================== CHƯƠNG 1 ====================
+\chapter{TỔNG QUAN ĐỀ TÀI VÀ BÀI TOÁN QUẢN LÝ NHÂN SỰ}
+
+\section{Bối cảnh và lý do chọn đề tài: Tầm quan trọng của việc số hóa quản lý nhân sự}
+
+\subsection*{Bối cảnh chuyển đổi số trong quản trị nguồn nhân lực}
+Trong kỷ nguyên công nghiệp 4.0 và chuyển đổi số toàn diện, nguồn nhân lực luôn được xác định là tài sản chiến lược quý giá nhất, quyết định trực tiếp đến năng lực cạnh tranh và sự phát triển bền vững của mọi tổ chức, doanh nghiệp. Cùng với sự mở rộng về quy mô hoạt động và cơ cấu bộ máy, khối lượng dữ liệu phát sinh xoay quanh người lao động ngày càng trở nên khổng lồ và phức tạp. Dữ liệu này không chỉ gói gọn trong hồ sơ lý lịch trích ngang cơ bản, mà còn liên tục biến động qua các giai đoạn: ký kết -- điều chỉnh hợp đồng lao động, theo dõi quá trình công tác (luân chuyển phòng ban, bổ nhiệm chức vụ, khen thưởng, kỷ luật), đánh giá năng lực cho đến khi kết thúc thời gian làm việc.
+
+Do đó, công tác quản trị nhân sự (Human Resource Management -- HRM) không còn đơn thuần là hoạt động hành chính văn phòng mang tính chất ghi chép sự vụ, mà đã trở thành bài toán chiến lược đòi hỏi tính tức thời, chuẩn xác và khả năng bảo mật thông tin ở mức độ cao.
+
+\subsection*{Hạn chế cố hữu của phương thức quản lý truyền thống}
+Thực tế tại nhiều cơ quan, đơn vị và doanh nghiệp có quy mô vừa và nhỏ hiện nay cho thấy, quy trình theo dõi nhân sự vẫn phụ thuộc đáng kể vào các giải pháp thủ công hoặc các công cụ bảng tính văn phòng rời rạc (tiêu biểu như Microsoft Excel) và hồ sơ giấy tờ lưu trữ vật lý. Phương thức tiếp cận này bộc lộ nhiều điểm nghẽn nghiêm trọng:
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{Phân mảnh dữ liệu và nguy cơ mất tính nhất quán:} Thông tin nhân viên, chức vụ, phòng ban và hợp đồng thường được lưu trữ trên nhiều bảng tính hoặc biểu mẫu độc lập. Khi có sự điều động, thuyên chuyển công tác hoặc điều chỉnh phụ cấp, việc cập nhật thủ công không đồng bộ rất dễ dẫn đến tình trạng sai lệch dữ liệu giữa các bộ phận, dư thừa thông tin hoặc thất lạc hồ sơ lịch sử.
+    \item \textbf{Hiệu suất tra cứu và tổng hợp thấp:} Khi số lượng nhân sự tăng lên đến hàng trăm hay hàng nghìn người, việc tìm kiếm hồ sơ kết hợp nhiều tiêu chí phức tạp (như tìm theo phòng ban, ngạch chức vụ, tình trạng công tác) hoặc trích xuất cây cấu trúc tổ chức trở nên cồng kềnh, tiêu tốn nhiều thời gian và dễ xảy ra sai sót chủ quan.
+    \item \textbf{Rủi ro pháp lý do thiếu cảnh báo tự động:} Các mốc thời gian có tính pháp lý cao, đặc biệt là thời hạn hiệu lực của hợp đồng lao động, thường bị theo dõi sót. Việc không có cơ chế cảnh báo tự động trước thời điểm hợp đồng hết hạn từ 15 đến 30 ngày dễ dẫn đến tranh chấp lao động, vi phạm quy định pháp luật hoặc làm gián đoạn quyền lợi của người lao động.
+    \item \textbf{Bất cập trong bảo mật và phân quyền:} Bảng tính hoặc hồ sơ giấy truyền thống rất khó thiết lập cơ chế phân quyền xem/chỉnh sửa chi tiết giữa cán bộ nghiệp vụ nhân sự và quản trị viên, tiềm ẩn nguy cơ lộ lọt các thông tin nhạy cảm (như mức lương, lịch sử kỷ luật, thông tin định danh cá nhân).
+\end{itemize}
+
+\subsection*{Tầm quan trọng và tính tất yếu của việc số hóa}
+Số hóa quy trình quản trị nhân sự thông qua việc xây dựng một hệ sinh thái phần mềm chuyên biệt là giải pháp mang tính bước ngoặt nhằm khắc phục triệt để các hạn chế nêu trên:
+\begin{enumerate}[leftmargin=1.0cm]
+    \item \textbf{Chuẩn hóa và tập trung hóa dữ liệu:} Toàn bộ thông tin từ hồ sơ cá nhân, ảnh đại diện, danh mục tổ chức đến lịch sử công tác và dữ liệu hợp đồng đều được tổ chức lưu trữ tập trung trên hệ quản trị cơ sở dữ liệu quan hệ chặt chẽ, đảm bảo tính toàn vẹn và duy nhất của dữ liệu.
+    \item \textbf{Tối ưu hóa năng suất vận hành:} Tự động hóa các thao tác thủ công, cung cấp công cụ tìm kiếm đa tiêu chí tức thì, hỗ trợ kết xuất báo cáo, in ấn sơ yếu lý lịch và trích xuất dữ liệu đa định dạng (Excel, PDF) một cách nhanh chóng, chuẩn mực.
+    \item \textbf{Chủ động kiểm soát nghiệp vụ:} Cơ chế giám sát thời hạn hợp đồng và phát cảnh báo tự động trên giao diện giúp bộ phận nhân sự luôn chủ động trong kế hoạch tái ký, gia hạn hoặc thanh lý hợp đồng đúng pháp luật.
+    \item \textbf{Trực quan hóa và nâng cao năng lực quản trị:} Hỗ trợ biểu diễn trực quan cơ cấu tổ chức thông qua các điều khiển phân cấp (TreeView), giúp nhà quản lý nắm bắt toàn diện bức tranh nhân sự của đơn vị để đưa ra các quyết định điều chuyển, phân bổ nhân lực hợp lý.
+\end{enumerate}
+
+\subsection*{Lý do lựa chọn đề tài}
+Xuất phát từ yêu cầu thực tiễn cấp thiết của bài toán quản trị nhân sự và mục tiêu học phần Lập trình trên Windows (COMP1019) tại Khoa Công nghệ Thông tin -- HCMUE, nhóm đã quyết định lựa chọn thực hiện đề tài: \textbf{"Xây dựng Phần mềm Quản lý Nhân sự"}.
+
+Về mặt công nghệ, việc lựa chọn nền tảng C\# Windows Forms kết hợp hệ quản trị cơ sở dữ liệu Microsoft SQL Server đem lại sự ổn định cao, tốc độ phản hồi nhanh và khả năng tương thích tối ưu trên môi trường máy tính văn phòng. Đặc biệt, đề tài chú trọng áp dụng chuẩn kiến trúc Model -- View -- Presenter (MVP) kết hợp cùng các mẫu thiết kế hiện đại như Repository Pattern và Service Layer. Cách tiếp cận này không chỉ nhằm giải quyết trọn vẹn các yêu cầu nghiệp vụ quản lý nhân sự thực tế, mà còn giúp nhóm rèn luyện kỹ năng phân rã kiến trúc phần mềm chuyên nghiệp, triệt tiêu sự phụ thuộc giữa giao diện và logic xử lý, từ đó nâng cao tính tái sử dụng, khả năng kiểm thử độc lập và mở rộng hệ thống trong dài hạn.
+
+\section{Mục tiêu đề tài: Xây dựng hệ thống quản lý hồ sơ, hợp đồng, quá trình công tác}
+
+\subsection{Mục tiêu tổng quát}
+Mục tiêu xuyên suốt của đề tài là xây dựng hoàn chỉnh ứng dụng quản lý nhân sự trên nền tảng ứng dụng máy tính (Desktop Application) sử dụng C\# Windows Forms và hệ quản trị cơ sở dữ liệu Microsoft SQL Server. Hệ thống hướng tới việc tin học hóa toàn diện quy trình quản trị nhân lực trong tổ chức, giúp đồng bộ hóa dữ liệu từ khâu tiếp nhận nhân sự, ký kết theo dõi hợp đồng, ghi nhận diễn biến quá trình công tác cho đến công tác tổng hợp, in ấn và báo cáo thống kê một cách tự động, chuẩn xác và an toàn.
+
+\subsection{Mục tiêu chức năng và nghiệp vụ cụ thể}
+Để hiện thực hóa mục tiêu tổng quát, hệ thống tập trung giải quyết các bài toán nghiệp vụ chuyên sâu sau:
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{Quản lý hồ sơ nhân viên toàn diện và trực quan:} Xây dựng giao diện phân tách rõ ràng giữa thông tin định danh cá nhân và thông tin công tác qua điều khiển TabControl. Xử lý lưu trữ và hiển thị ảnh chân dung trực quan (BLOB hoặc đường dẫn).
+    \item \textbf{Tra cứu và tìm kiếm thông tin đa tiêu chí:} Cung cấp bộ lọc tìm kiếm linh hoạt kết hợp: Mã nhân viên, Họ và tên, Phòng ban, Chức vụ và Trạng thái làm việc.
+    \item \textbf{Quản lý cơ cấu tổ chức và sơ đồ phân cấp:} Quản lý danh mục phòng ban, chức vụ; thiết lập vai trò chức danh; trực quan hóa sơ đồ tổ chức qua TreeView và lọc nhân sự theo đơn vị.
+    \item \textbf{Theo dõi quá trình công tác xuyên suốt:} Lưu trữ dòng lịch sử công tác theo thời gian: ghi nhận điều chuyển phòng ban, bổ nhiệm chức vụ, khen thưởng và kỷ luật.
+    \item \textbf{Quản lý hợp đồng lao động và cảnh báo thông minh:} Quản lý thời hạn, lương, phụ cấp; tự động quét và đưa ra cảnh báo hợp đồng sắp hết hạn từ 15 đến 30 ngày.
+    \item \textbf{Báo cáo, thống kê và kết xuất đa định dạng:} Sử dụng Microsoft ReportViewer kết xuất sơ yếu lý lịch có ảnh và danh sách nhân sự; hỗ trợ xuất file Excel (.xlsx) và PDF (.pdf).
+\end{itemize}
+
+\subsection{Mục tiêu kỹ thuật và chuẩn mực kiến trúc phần mềm}
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{Ứng dụng triệt để kiến trúc MVP:} Tách bạch View, Presenter, Model thông qua hệ thống Interface trừu tượng.
+    \item \textbf{Kiến trúc đa tầng (Multi-tier Architecture):} Tách tầng dữ liệu qua Repository Pattern và tầng nghiệp vụ qua Service Layer.
+    \item \textbf{Thiết kế cơ sở dữ liệu quan hệ chuẩn hóa trên SQL Server:} Ràng buộc toàn vẹn khóa chính, khóa ngoại, check constraints và bảo toàn tính toàn vẹn giao dịch (ACID).
+    \item \textbf{Phân quyền dựa trên vai trò (RBAC):} Phân quyền chặt chẽ giữa Quản trị viên (Admin) và Nhân viên Nhân sự (HR Staff).
+\end{itemize}
+
+\section{Đối tượng và phạm vi ứng dụng}
+
+\subsection{Đối tượng sử dụng hệ thống}
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{Quản trị viên hệ thống (Administrator):} Quản lý tài khoản, cấp phát vai trò, cấu hình chuỗi kết nối SQL Server, khởi tạo dữ liệu ban đầu, quản trị danh mục cốt lõi và kiểm soát toàn bộ cơ sở dữ liệu.
+    \item \textbf{Nhân viên quản lý nhân sự (HR Staff):} Tiếp nhận hồ sơ nhân sự, cập nhật ảnh thẻ, quản lý hợp đồng lao động, ghi nhận lịch sử công tác, khai thác bộ lọc tìm kiếm, nhận cảnh báo hết hạn hợp đồng và thực hiện in ấn báo cáo.
+\end{itemize}
+
+\subsection{Phạm vi ứng dụng của đề tài}
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{Phạm vi nghiệp vụ:} Gồm 5 phân hệ cốt lõi: Hồ sơ nhân sự, Tổ chức bộ máy, Quá trình công tác, Hợp đồng lao động, và Báo cáo -- In ấn. (Giới hạn: Không tích hợp máy chấm công phần cứng, tính thuế thu nhập cá nhân lũy tiến phức tạp hay đánh giá KPI).
+    \item \textbf{Phạm vi công nghệ:} Desktop Application trên nền tảng Microsoft Windows, ngôn ngữ C\# WinForms (.NET Framework), CSDL Microsoft SQL Server, mô hình MVP kết hợp Repository Pattern và Service Layer, công cụ Microsoft ReportViewer.
+\end{itemize}
+
+\section{Kế hoạch và Phân công công việc}
+
+\subsection{Bảng phân công công việc chi tiết cho các thành viên}
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabularx}{\textwidth}{|p{3cm}|p{3.5cm}|p{4.2cm}|p{3.8cm}|}
+\hline
+\textbf{Thành viên / Vai trò} & \textbf{Nhiệm vụ Kiến trúc \& CSDL} & \textbf{Chức năng Nghiệp vụ} & \textbf{Kỹ thuật bổ trợ / Nâng cao} \\ \hline
+\textbf{Thành viên 1} \newline (Trưởng nhóm -- Hệ thống, Hồ sơ \& Tìm kiếm) & • Thiết lập Solution MVP. \newline • Phân tích ERD \& CSDL. \newline • Đăng nhập \& Phân quyền. \newline • Quản trị Git repo. & • Quản lý hồ sơ nhân viên (TabControl). \newline • Quản lý ảnh thẻ (BLOB / Path). \newline • Bộ lọc tìm kiếm đa tiêu chí. & • Base Classes. \newline • DbConnectionFactory. \newline • DatabaseInitializer. \\ \hline
+\textbf{Thành viên 2} \newline (Tổ chức \& Quá trình công tác) & • Thiết kế MVP cho: Phòng ban, Chức vụ, Quá trình công tác. \newline • Quản lý Git nhánh cá nhân. & • CRUD danh mục Phòng ban. \newline • CRUD danh mục Chức vụ. \newline • Theo dõi lịch sử công tác (điều chuyển, bổ nhiệm, khen thưởng/kỷ luật). & • Sơ đồ tổ chức phân cấp bằng TreeView. \newline • Lọc \& xuất danh sách theo phòng ban. \\ \hline
+\textbf{Thành viên 3} \newline (Hợp đồng, Báo cáo \& In ấn) & • Thiết kế MVP cho: Hợp đồng, Thống kê \& Báo cáo. \newline • Quản lý Git nhánh cá nhân. & • Theo dõi hợp đồng lao động (thời hạn, mức lương, phụ cấp). \newline • In danh sách \& hồ sơ nhân viên qua ReportViewer. & • Cảnh báo hợp đồng sắp hết hạn (15--30 ngày). \newline • Xuất báo cáo ra file Excel (.xlsx) \& PDF (.pdf). \\ \hline
+\end{tabularx}
+\caption{Bảng phân công nhiệm vụ chi tiết của các thành viên trong nhóm}
+\end{table}
+
+\subsection{Lộ trình thực hiện đề tài (Kế hoạch 4 tuần)}
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{Tuần 1: Phân tích \& Chuẩn hóa hệ thống:} Thiết kế CSDL SQL Server, thống nhất quy ước đặt tên (Naming Convention), khởi tạo Git repository công khai, phân chia cấu trúc Solution đa tầng.
+    \item \textbf{Tuần 2: Xây dựng khung nền tảng \& Triển khai mã nguồn cốt lõi:} Hoàn thành Base Classes, cấu hình kết nối CSDL, Module Đăng nhập \& Phân quyền (Thành viên 1); hoàn thiện CRUD danh mục cơ bản (Thành viên 2 \& 3).
+    \item \textbf{Tuần 3: Tích hợp hệ thống \& Phát triển tính năng nâng cao:} Ghép nối giao diện chính MDI Form/Sidebar; hiện thực hóa sơ đồ cây TreeView; lập trình giải thuật quét cảnh báo hợp đồng sắp hết hạn (15--30 ngày); tích hợp Microsoft ReportViewer.
+    \item \textbf{Tuần 4: Kiểm thử, Tối ưu hóa \& Soạn thảo báo cáo đồ án:} Kiểm thử tích hợp (Integration Testing), kiểm thử ràng buộc CSDL, kiểm tra Validation \& Exception Handling; đóng gói sản phẩm và hoàn tất tài liệu báo cáo học thuật bằng LaTeX.
+\end{itemize}
+
+% ==================== CHƯƠNG 2 ====================
+\chapter{CƠ SỞ LÝ THUYẾT VÀ CÔNG NGHỆ SỬ DỤNG}
+
+\section{Nền tảng .NET và C\# Windows Forms: Giới thiệu tổng quan}
+
+\subsection{Tổng quan về nền tảng Microsoft .NET}
+Nền tảng Microsoft .NET Framework là môi trường thực thi và phát triển toàn diện, cung cấp hai thành phần cốt lõi:
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{Common Language Runtime (CLR):} Quản lý bộ nhớ tự động qua cơ chế Garbage Collection (GC) loại bỏ rò rỉ bộ nhớ; biên dịch động Just-In-Time (JIT) từ mã trung gian MSIL sang mã máy bản địa; bảo đảm an toàn kiểu (Type Safety) và bắt ngoại lệ tập trung.
+    \item \textbf{Framework Class Library (FCL):} Cung cấp thư viện lớp phong phú hỗ trợ xử lý dữ liệu, vào ra tập tin (I/O), bộ sưu tập (Collections), kết nối cơ sở dữ liệu (ADO.NET), bảo mật và đồ họa.
+\end{itemize}
+
+\subsection{Ngôn ngữ lập trình C\#}
+C\# là ngôn ngữ lập trình hướng đối tượng mạnh mẽ, thực thi nghiêm ngặt 4 đặc tính OOP (Đóng gói, Kế thừa, Đa hình, Trừu tượng hóa), định kiểu tĩnh an toàn, hỗ trợ cơ chế Event/Delegate phục vụ lập trình hướng sự kiện và biểu thức LINQ truy vấn tập hợp linh hoạt.
+
+\subsection{Công nghệ giao diện C\# Windows Forms (WinForms)}
+WinForms là công nghệ xây dựng GUI ổn định trên Windows, hoạt động theo mô hình hướng sự kiện (Event-driven). Hệ thống điều khiển phong phú gồm DataGridView (hiển thị bảng), TabControl (phân tách bố cục dữ liệu đa chiều), TreeView (phân cấp cây tổ chức), PictureBox (hiển thị ảnh chân dung), và ErrorProvider (hiển thị cảnh báo nhập liệu). WinForms chạy cục bộ với độ trễ thấp và hiệu năng cao.
+
+\subsection{Lý do lựa chọn nền tảng cho đề tài Quản lý nhân sự}
+Sự kết hợp giữa .NET, C\# và WinForms đem lại hiệu năng phản hồi nhanh trên môi trường máy trạm văn phòng, tận dụng tài nguyên cục bộ mà không phụ thuộc vào độ trễ mạng, đồng thời cung cấp đầy đủ các công cụ hướng đối tượng để hiện thực hóa kiến trúc MVP phân tầng nghiêm ngặt.
+
+\section{Kiến trúc MVP (Model -- View -- Presenter)}
+
+\subsection{Định nghĩa và lý do sử dụng thay cho Code-Behind truyền thống}
+Trong phương pháp Code-Behind truyền thống, logic xử lý và truy vấn CSDL bị viết lẫn lộn trong file Form, tạo ra lớp vạn năng (God Object), ghép nối chặt (Tight Coupling), bất khả thi khi viết Unit Test tự động và dễ xung đột mã nguồn trên Git.
+
+Kiến trúc MVP khắc phục triệt để bằng cách tách biệt trách nhiệm:
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{View (Giao diện):} Là thành phần thụ động (Passive View), chỉ bắt sự kiện và hiển thị dữ liệu qua hợp đồng \texttt{IView}.
+    \item \textbf{Presenter (Điều phối):} Tiếp nhận sự kiện từ View, điều phối luồng dữ liệu, gọi tầng Service xử lý và cập nhật kết quả ngược lại lên View mà không tham chiếu đến điều khiển WinForms cụ thể nào.
+    \item \textbf{Model (Dữ liệu):} Đóng gói các lớp thực thể POCO và tiêu chí lọc.
+\end{itemize}
+
+\subsection{Phân tích luồng dữ liệu giữa Model, View (Interface) và Presenter}
+Chu trình tương tác gồm 7 bước:
+\begin{enumerate}[leftmargin=1.0cm]
+    \item Người dùng tương tác trên Form (nhấn nút Lưu, Tìm kiếm).
+    \item View ủy quyền sự kiện cho Presenter qua Interface.
+    \item Presenter thu thập dữ liệu từ các thuộc tính của \texttt{IView}, đóng gói vào Model.
+    \item Presenter gọi xuống tầng Service/Repository để thực thi nghiệp vụ và ghi nhận CSDL.
+    \item CSDL trả kết quả lên Repository và Service, chuyển tiếp cho Presenter.
+    \item Presenter định dạng kết quả và gọi các phương thức hiển thị trên \texttt{IView}.
+    \item View cập nhật giao diện (DataGridView, PictureBox, thông báo) cho người dùng.
+\end{enumerate}
+
+\section{Hệ quản trị CSDL Microsoft SQL Server: Lý thuyết về lưu trữ và truy vấn}
+
+\subsection{Tổng quan về Microsoft SQL Server}
+SQL Server là hệ quản trị CSDL quan hệ (RDBMS) cấp doanh nghiệp, sử dụng Transact-SQL (T-SQL), đảm bảo lưu trữ bền vững, toàn vẹn dữ liệu và tích hợp chặt chẽ với ADO.NET trong C\#.
+
+\subsection{Lý thuyết về cấu trúc lưu trữ dữ liệu (Storage Engine)}
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{Database Files:} Tập tin dữ liệu chính (\texttt{.mdf}) và tập tin nhật ký giao dịch (\texttt{.ldf}) áp dụng cơ chế Write-Ahead Logging (WAL).
+    \item \textbf{Data Page \& Extent:} Page 8 KB là đơn vị lưu trữ cơ sở; 8 Page liền kề tạo thành một Extent (64 KB).
+    \item \textbf{Lưu trữ BLOB (VARBINARY(MAX)):} SQL Server lưu con trỏ 16 bytes trong dòng dữ liệu chính, khối nhị phân ảnh được đưa ra các trang LOB Page riêng biệt, giúp tối ưu tốc độ quét bảng.
+\end{itemize}
+
+\subsection{Lý thuyết về mô hình hóa quan hệ và đảm bảo tính toàn vẹn (ACID)}
+Lược đồ CSDL chuẩn hóa 3NF; thiết lập chặt chẽ Primary Key, Foreign Key, Unique Constraint, Check Constraint. Giao dịch tuân thủ 4 thuộc tính ACID (Nguyên tử, Nhất quán, Cô lập, Bền vững), đặc biệt trong các tác vụ luân chuyển nhân sự liên bảng.
+
+\subsection{Lý thuyết về tối ưu hóa truy vấn và chỉ mục (Indexing Strategy)}
+Áp dụng cấu trúc cây B-Tree với Clustered Index trên khóa chính và Non-Clustered Index trên các cột tìm kiếm thường xuyên (\texttt{FullName}, \texttt{DepartmentId}, \texttt{ExpiryDate}), nâng cao tốc độ tra cứu đạt độ phức tạp $O(\log N)$.
+
+\subsection{Kỹ thuật truy vấn dữ liệu và đối tượng lập trình phía CSDL}
+Sử dụng Multi-table Joins (INNER/LEFT JOIN), Stored Procedures tham số hóa chống SQL Injection, và Khung nhìn (Views) tổng hợp thông tin trích ngang nhân sự.
+
+\section{Các công cụ hỗ trợ phát triển hệ thống}
+
+\subsection{Quản lý mã nguồn với Git \& GitHub}
+Sử dụng mô hình nhánh tính năng (Feature Branching) kết hợp Pull Request, Code Review và Commit Graph minh bạch, ghi nhận đóng góp độc lập của cả 3 thành viên.
+
+\subsection{Công cụ báo cáo và in ấn (Microsoft ReportViewer)}
+Sử dụng tệp định nghĩa báo cáo \texttt{.rdlc}, nạp dữ liệu từ Object Data Source chuẩn MVP, kết xuất hồ sơ trích ngang có ảnh thẻ và bảng danh sách phòng ban; hỗ trợ trích xuất ra định dạng Excel (.xlsx) và PDF (.pdf).
+
+\subsection{Công cụ và điều khiển UI/UX nâng cao (TreeView, TabControl)}
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{TreeView:} Biểu diễn cây tổ chức đa cấp (Tổng công ty $\rightarrow$ Phòng ban $\rightarrow$ Nhân viên trực thuộc), kích hoạt sự kiện \texttt{AfterSelect} để lọc tức thì danh sách.
+    \item \textbf{TabControl:} Phân chia bố cục làm việc cho màn hình chi tiết hồ sơ nhân sự (Tab 1: Thông tin cá nhân \& ảnh; Tab 2: Thông tin công tác \& hành chính).
+\end{itemize}
+
+% ==================== CHƯƠNG 3 ====================
+\chapter{PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG}
+
+\section{Đặc tả yêu cầu hệ thống}
+
+\subsection{Yêu cầu chức năng (Functional Requirements -- FR)}
+\begin{enumerate}[leftmargin=1.0cm]
+    \item \textbf{Phân hệ Xác thực và Phân quyền:}
+    \begin{itemize}
+        \item FR-01: Đăng nhập hệ thống, kiểm tra thông tin tài khoản hợp lệ.
+        \item FR-02: Phân quyền theo vai trò Quản trị viên (Admin) và Nhân viên Nhân sự (HR Staff).
+        \item FR-03: Quản lý tài khoản (tạo mới, đổi mật khẩu, phân vai trò, khóa tài khoản).
+        \item FR-04: Đăng xuất an toàn và giải phóng phiên làm việc.
+    \end{itemize}
+    \item \textbf{Phân hệ Quản lý Hồ sơ nhân viên:}
+    \begin{itemize}
+        \item FR-05: Thêm mới hồ sơ nhân sự đầy đủ thông tin cá nhân và công tác.
+        \item FR-06: Cập nhật, chỉnh sửa thông tin lý lịch và trạng thái làm việc.
+        \item FR-07: Quản lý ảnh thẻ nhân viên (chọn file, lưu trữ BLOB/đường dẫn, hiển thị trực quan).
+        \item FR-08: Tìm kiếm đa tiêu chí (mã, họ tên, phòng ban, chức vụ, trạng thái).
+        \item FR-09: Xóa/lưu trữ hồ sơ đảm bảo toàn vẹn dữ liệu.
+    \end{itemize}
+    \item \textbf{Phân hệ Tổ chức \& Quá trình công tác:}
+    \begin{itemize}
+        \item FR-10: Quản lý danh mục Phòng ban (Thêm, Sửa, Xóa, Tra cứu).
+        \item FR-11: Quản lý danh mục Chức vụ và cấp bậc quyền hạn.
+        \item FR-12: Theo dõi lịch sử công tác (điều chuyển đơn vị, bổ nhiệm/miễn nhiệm, khen thưởng, kỷ luật).
+        \item FR-13: Trực quan hóa sơ đồ cây cơ cấu tổ chức qua TreeView.
+        \item FR-14: Lọc và kết xuất danh sách nhân sự theo từng đơn vị phòng ban.
+    \end{itemize}
+    \item \textbf{Phân hệ Quản lý Hợp đồng lao động:}
+    \begin{itemize}
+        \item FR-15: Lập, điều chỉnh, gia hạn hợp đồng (loại hợp đồng, thời hạn, lương, phụ cấp).
+        \item FR-16: Theo dõi và cập nhật trạng thái hiệu lực hợp đồng.
+        \item FR-17: Tự động quét và phát cảnh báo hợp đồng sắp hết hạn trong khoảng 15--30 ngày.
+    \end{itemize}
+    \item \textbf{Phân hệ Báo cáo, Thống kê \& In ấn:}
+    \begin{itemize}
+        \item FR-18: In sơ yếu lý lịch nhân sự có ảnh qua Microsoft ReportViewer.
+        \item FR-19: In báo cáo danh sách nhân sự gom nhóm theo phòng ban.
+        \item FR-20: Xuất dữ liệu báo cáo ra tập tin định dạng Microsoft Excel và PDF.
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Yêu cầu phi chức năng (Non-Functional Requirements -- NFR)}
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{Bảo mật (Security):} Băm mật khẩu (hashing) trước khi lưu CSDL; kiểm soát truy cập nghiêm ngặt (RBAC); 100\% câu truy vấn tham số hóa chống SQL Injection.
+    \item \textbf{Hiệu năng (Performance):} Thời gian phản hồi tác vụ tra cứu dưới 1 giây; nạp ảnh và danh sách mượt mà, không khóa giao diện; kiểm tra hợp lệ dữ liệu đầu vào (Validation) trước khi lưu.
+    \item \textbf{Chuẩn kiến trúc phần mềm:} Phân tầng rõ ràng (Models, Views, Presenters, Services, Repositories, Data); tách biệt tuyệt đối giữa View và Logic; giao tiếp qua Interface ghép nối lỏng.
+\end{itemize}
+
+\section{Sơ đồ Use-case (Use-case Diagram)}
+
+\subsection{Sơ đồ Use-case tổng quan hệ thống}
+Hệ thống gồm 2 tác nhân chính: \textbf{Quản trị viên (Admin)} và \textbf{Nhân viên Nhân sự (HR Staff)}. Quản trị viên kế thừa toàn bộ quyền tác nghiệp của HR Staff, đồng thời nắm giữ các quyền quản trị tài khoản và hệ thống. Mọi tương tác chức năng đều có quan hệ phụ thuộc bắt buộc (\texttt{<<include>>}) tới Use-case Đăng nhập để định danh phiên làm việc.
+
+\subsection{Phân rã các Use-case chính}
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{Phân rã Use-case Hồ sơ Nhân viên:} Thêm mới / Chỉnh sửa hồ sơ bắt buộc (\texttt{<<include>>}) kiểm tra dữ liệu hợp lệ (Validate); cập nhật ảnh chân dung và tìm kiếm đa tiêu chí đóng vai trò mở rộng (\texttt{<<extend>>}).
+    \item \textbf{Phân rã Use-case Danh mục \& Quá trình công tác:} Quản lý Phòng ban / Chức vụ; ghi nhận điều chuyển / khen thưởng kỷ luật bắt buộc (\texttt{<<include>>}) tạo bản ghi lịch sử vào \texttt{WorkHistory}; xem sơ đồ TreeView mở rộng (\texttt{<<extend>>}) xuất danh sách nhân sự theo phòng ban.
+    \item \textbf{Phân rã Use-case Hợp đồng \& Báo cáo:} Lập hợp đồng mở rộng (\texttt{<<extend>>}) điều chỉnh đãi ngộ; theo dõi trạng thái mở rộng cảnh báo hợp đồng sắp hết hạn (15--30 ngày); in sơ yếu lý lịch và danh sách phòng ban mở rộng trích xuất tệp tin Excel/PDF.
+\end{itemize}
+
+% ==================== CHƯƠNG 4 ====================
+\chapter{HIỆN THỰC HỆ THỐNG (ÁP DỤNG KIẾN TRÚC PHẦN MỀM)}
+
+\section{Cấu trúc Solution và Tổ chức mã nguồn}
+
+Toàn bộ Solution được phân chia thành các thư mục vật lý tương ứng với từng tầng trách nhiệm:
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{Data:} Chứa \texttt{DbConnectionFactory.cs} quản lý kết nối SQL Server và \texttt{DatabaseInitializer.cs} khởi tạo CSDL.
+    \item \textbf{Models:} Chứa các thực thể POCO (\texttt{Account}, \texttt{Employee}, \texttt{Department}, \texttt{Position}, \texttt{Contract}, \texttt{WorkHistory}), các Enums và đối tượng đóng gói tiêu chí tìm kiếm \texttt{EmployeeSearchCriteria.cs}.
+    \item \textbf{Repositories:} Tầng truy xuất dữ liệu thông qua ADO.NET tham số hóa, định nghĩa các Interface (\texttt{IEmployeeRepository}, \texttt{IContractRepository},...) và các lớp triển khai cụ thể.
+    \item \textbf{Services:} Tầng quy tắc nghiệp vụ (\texttt{AuthService}, \texttt{EmployeeService}, \texttt{ContractService}, \texttt{PrintService},...), tập trung toàn bộ kiểm tra ràng buộc và xử lý logic trước khi gửi sang Presenter hoặc Repository.
+    \item \textbf{Presenters:} Tầng điều phối MVP (\texttt{LoginPresenter}, \texttt{MainPresenter}, \texttt{EmployeePresenter}, \texttt{ContractPresenter},...), nhận lệnh từ Interface của View, gọi Service và gán dữ liệu ngược lại cho View.
+    \item \textbf{Views:} Tầng giao diện, chia thành thư mục \texttt{Interfaces} (định nghĩa thuộc tính và sự kiện trừu tượng) và \texttt{Forms} (các Form WinForms kế thừa Form và thực thi Interface). Áp dụng chiến lược phân tách Form Master (danh sách) và Form Detail (chi tiết).
+\end{itemize}
+
+\section{Hiện thực Phân hệ Hệ thống và Quản lý Hồ sơ (Thành viên 1)}
+
+\subsection{Đăng nhập và Màn hình chính (MDI)}
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{Màn hình Đăng nhập (\texttt{FrmLogin}):} Thiết kế gọn gàng, mật khẩu ẩn ký tự. Form là Passive View thực thi \texttt{ILoginView}. Khi người dùng bấm Đăng nhập, View chuyển tiếp sang \texttt{LoginPresenter}. Presenter kiểm tra rỗng, gọi \texttt{AuthService} đối soát CSDL, lưu phiên làm việc vào \texttt{SessionManager} và thông báo cho View đóng Form, mở màn hình chính.
+    \item \textbf{Màn hình chính MDI (\texttt{FrmMain}):} Bố cục Sidebar Navigation bên trái, vùng trung tâm MDI Client chứa các Form con, chân trang StatusStrip hiển thị người dùng và thời gian thực. Áp dụng cơ chế kiểm soát Form đơn nhất (Single Instance Child Form) ngăn mở trùng lặp.
+    \item \textbf{Phân quyền trên giao diện:} \texttt{MainPresenter} đọc vai trò từ \texttt{SessionManager}: Tài khoản Admin được kích hoạt toàn bộ menu; tài khoản HR Staff tự động bị ẩn hoặc khóa phân hệ Quản lý tài khoản và cấu hình hệ thống.
+\end{itemize}
+
+\subsection{Quản lý Hồ sơ nhân sự}
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{Màn hình danh sách (\texttt{FrmEmployee}):} Bảng DataGridView hiển thị trích ngang, bộ lọc tìm kiếm đa tiêu chí (mã, tên, phòng ban, chức vụ, trạng thái). Khi tìm kiếm, \texttt{EmployeePresenter} đóng gói \texttt{EmployeeSearchCriteria} gửi xuống \texttt{EmployeeService} lọc và trả kết quả hiển thị.
+    \item \textbf{Màn hình chi tiết TabControl (\texttt{FrmEmployeeDetail}):} 
+    \begin{itemize}
+        \item \textit{Tab 1 -- Thông tin cá nhân \& nhân thân:} Họ tên, ngày sinh, CCCD, quê quán, số điện thoại, email và khung PictureBox hiển thị ảnh chân dung cùng nút chọn ảnh.
+        \item \textit{Tab 2 -- Thông tin công tác \& hành chính:} Phòng ban, chức vụ, ngày tiếp nhận, tình trạng làm việc, mã số thuế, số BHXH.
+    \end{itemize}
+    \item \textbf{Xác thực nghiệp vụ tại \texttt{EmployeeService}:} Kiểm tra bắt buộc các trường cốt lõi, CCCD đúng 12 chữ số và không trùng lặp, tuổi nhân sự từ đủ 18 tuổi trở lên. Nếu sai sót, tự động chuyển về đúng Tab lỗi để người dùng điều chỉnh.
+    \item \textbf{Xử lý lưu trữ và hiển thị ảnh thẻ:} Hỗ trợ lưu chuỗi nhị phân \texttt{VARBINARY(MAX)} an toàn trong SQL Server (chuyển đổi qua lại giữa \texttt{Image} và \texttt{byte[]}). Khi đọc ảnh từ đường dẫn đĩa, sử dụng luồng \texttt{MemoryStream} để nạp ảnh không khóa file (non-locking file), tránh hiện tượng khóa tập tin trên hệ điều hành.
+\end{itemize}
+
+\section{Hiện thực Phân hệ Tổ chức, Công tác và Hợp đồng}
+
+\subsection{Danh mục Tổ chức và Lịch sử công tác (Thành viên 2)}
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{Quản lý danh mục Phòng ban \& Chức vụ (\texttt{FrmDepartment}, \texttt{FrmPosition}):} Cung cấp đầy đủ thao tác CRUD. Tầng Service kiểm tra ràng buộc toàn vẹn, ngăn chặn xóa phòng ban/chức vụ đang có nhân sự trực thuộc để bảo vệ toàn vẹn tham chiếu.
+    \item \textbf{Quản lý Quá trình công tác (\texttt{FrmWorkHistory}, \texttt{FrmWorkHistoryDetail}):} Ghi nhận dòng thời gian các mốc bổ nhiệm, điều chuyển, khen thưởng, kỷ luật. Nghiệp vụ điều chuyển được thực thi trong một Database Transaction: thêm mốc mới vào \texttt{WorkHistory} và tự động cập nhật \texttt{DepartmentId}/\texttt{PositionId} trên bảng \texttt{Employee}, bảo đảm tính nguyên tử (Atomicity).
+    \item \textbf{Sơ đồ phân cấp TreeView:} Trực quan hóa cấu trúc bộ máy (Doanh nghiệp $\rightarrow$ Phòng ban $\rightarrow$ Danh sách nhân sự). Bắt sự kiện \texttt{AfterSelect} để lọc tức thì danh sách nhân sự của phòng ban được chọn lên DataGridView bên cạnh.
+\end{itemize}
+
+\subsection{Quản lý Hợp đồng lao động (Thành viên 3)}
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{Theo dõi hợp đồng (\texttt{FrmContract}, \texttt{FrmContractDetail}):} Quản lý loại hợp đồng, ngày ký, ngày bắt đầu, ngày kết thúc, mức lương cơ bản và phụ cấp. Kiểm tra ràng buộc ngày kết thúc lớn hơn ngày bắt đầu, lương không âm và cảnh báo thay thế hợp đồng cũ còn hiệu lực.
+    \item \textbf{Thuật toán quét cảnh báo hợp đồng sắp hết hạn:} \texttt{ContractService} định kỳ quét CSDL tìm các hợp đồng có trạng thái "Đang hiệu lực" và thỏa mãn điều kiện:
+    \[
+    CurrentDate \le EndDate \le CurrentDate + 30\text{ ngày}
+    \]
+    Tính toán $RemainingDays = EndDate - CurrentDate$. Hiển thị cảnh báo tức thì khi mở phần mềm; hỗ trợ nút lọc danh sách cảnh báo chuyên biệt; áp dụng mã hóa màu sắc trên DataGridView (đỏ: dưới 15 ngày, vàng/cam: 15--30 ngày).
+\end{itemize}
+
+\section{Hiện thực tính năng Báo cáo và In ấn (Report -- Thành viên 3)}
+
+\subsection{Thiết kế biểu mẫu báo cáo chuẩn (RDLC Report Definition)}
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{Biểu mẫu Hồ sơ Sơ yếu lý lịch (\texttt{RptEmployeeProfile.rdlc}):} Khổ A4, góc trên nhúng ảnh thẻ động từ mảng byte BLOB (\texttt{image/jpeg}); thể hiện đầy đủ thông tin định danh, công tác và nhúng bảng con hiển thị lịch sử biến động quá trình công tác.
+    \item \textbf{Biểu mẫu Danh sách theo Phòng ban (\texttt{RptEmployeesByDepartment.rdlc}):} Bảng Tablix gom nhóm dòng theo \texttt{DepartmentName}, có dòng Group Header và Group Footer tự động tính tổng quân số qua biểu thức \texttt{=Count(Fields!EmployeeId.Value)}.
+\end{itemize}
+
+\subsection{Giao diện xem trước và điều phối theo MVP (\texttt{FrmPrintPreview})}
+Form chứa điều khiển \texttt{ReportViewer}, thực thi \texttt{IPrintPreviewView}. \texttt{PrintPresenter} nhận yêu cầu từ các Form nghiệp vụ, gọi \texttt{PrintService} đóng gói dữ liệu thành các tập hợp Business Objects và nạp lên View hiển thị trực quan trước khi in ấn.
+
+\subsection{Cơ chế Xuất báo cáo đa định dạng (Excel \& PDF)}
+Hỗ trợ trích xuất bản in ra file PDF sắc nét chuẩn trang A4 để lưu trữ hồ sơ điện tử, hoặc xuất file Excel (.xlsx) giữ nguyên định dạng cột số và ngày tháng, hỗ trợ cấp quản lý tiếp tục phân tích dữ liệu mà không cần nhập thủ công.
+
+% ==================== CHƯƠNG 5 ====================
+\chapter{KIỂM THỬ HỆ THỐNG (TESTING)}
+
+\section{Mục tiêu kiểm thử}
+Giai đoạn kiểm thử nhằm đáp ứng chuẩn đầu ra môn học (CLO3: Kiểm tra tính đúng đắn của phần mềm), bảo đảm toàn bộ hệ thống hoạt động ổn định, bắt trọn vẹn ngoại lệ (Exception Handling), kiểm tra tính hợp lệ dữ liệu đầu vào (Validation), bảo vệ toàn vẹn CSDL và kiểm chứng luồng giao diện tổng thể (Integration Testing).
+
+\section{Kiểm thử dữ liệu đầu vào và Xử lý ngoại lệ (Validation \& Exception Handling)}
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{Kiểm tra rỗng và sai định dạng:} Kiểm tra bắt buộc Mã nhân viên, Họ tên, Ngày sinh; các trường lương, phụ cấp phải là số dương. Sử dụng điều khiển \texttt{ErrorProvider} hiển thị biểu tượng chấm than đỏ trực quan cạnh ô nhập liệu sai thay vì lạm dụng MessageBox.
+    \item \textbf{Xử lý ngoại lệ:} Áp dụng các khối lệnh \texttt{try-catch-finally} tại các vị trí rủi ro cao (mở kết nối SQL, đọc file ảnh, chuyển đổi kiểu dữ liệu), ghi log và thông báo lỗi thân thiện, loại bỏ hoàn toàn sự cố sập ứng dụng đột ngột.
+\end{itemize}
+
+\section{Kiểm thử ràng buộc Cơ sở dữ liệu (Database Testing)}
+
+\subsection{Kịch bản kiểm thử ràng buộc Khóa chính và Duy nhất}
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabularx}{\textwidth}{|l|p{3.5cm}|p{3.8cm}|p{3.8cm}|c|}
+\hline
+\textbf{Mã} & \textbf{Tên kiểm thử} & \textbf{Thao tác kiểm tra} & \textbf{Kết quả mong đợi} & \textbf{Trạng thái} \\ \hline
+DB-TC01 & Trùng lặp khóa chính \texttt{EmployeeId} & Thêm nhân viên với mã đã tồn tại trong bảng \texttt{Employee}. & SQL Server chặn giao dịch, báo lỗi vi phạm Primary Key. & Đạt \\ \hline
+DB-TC02 & Tính duy nhất của CCCD (\texttt{CitizenId}) & Nhập số CCCD trùng với một nhân viên khác. & Báo lỗi vi phạm Unique Constraint trên cột \texttt{CitizenId}. & Đạt \\ \hline
+DB-TC03 & Tính duy nhất của Username & Thêm tài khoản có Username đã tồn tại trong bảng \texttt{Account}. & Từ chối bản ghi do vi phạm Unique Constraint. & Đạt \\ \hline
+DB-TC04 & Tính duy nhất của Số HĐ (\texttt{ContractNumber}) & Tạo hợp đồng có số hiệu trùng với hợp đồng đã lưu trước đó. & Chặn ghi dữ liệu, không cho phép trùng số hợp đồng. & Đạt \\ \hline
+\end{tabularx}
+\caption{Kịch bản kiểm thử ràng buộc Khóa chính và Duy nhất}
+\end{table}
+
+\subsection{Kịch bản kiểm thử ràng buộc Khóa ngoại và Toàn vẹn tham chiếu}
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabularx}{\textwidth}{|l|p{3.5cm}|p{3.8cm}|p{3.8cm}|c|}
+\hline
+\textbf{Mã} & \textbf{Tên kiểm thử} & \textbf{Thao tác kiểm tra} & \textbf{Kết quả mong đợi} & \textbf{Trạng thái} \\ \hline
+DB-TC05 & Thêm nhân viên có Phòng ban sai & Nhập \texttt{DepartmentId = 9999} không tồn tại trong CSDL. & Lỗi vi phạm Foreign Key constraint, chặn lưu dữ liệu mồ côi. & Đạt \\ \hline
+DB-TC06 & Thêm nhân viên có Chức vụ sai & Gán \texttt{PositionId = -1} không có trong bảng \texttt{Position}. & Lỗi xung đột khóa ngoại \texttt{FK\_Employee\_Position}. & Đạt \\ \hline
+DB-TC07 & Xóa Phòng ban đang có nhân sự & Thực thi lệnh \texttt{DELETE} phòng ban đang chứa nhân viên. & Chặn thao tác do ràng buộc Reference constraint. & Đạt \\ \hline
+DB-TC08 & Xóa Chức vụ đang được bổ nhiệm & Xóa chức danh mà nhân viên trong cơ quan đang đảm nhiệm. & Từ chối xóa, bảo vệ tính nhất quán dữ liệu chức danh. & Đạt \\ \hline
+DB-TC09 & Xóa nhân viên có liên kết hợp đồng/lịch sử & Xóa nhân viên đã có dữ liệu trong \texttt{Contract} và \texttt{WorkHistory}. & Kích hoạt cơ chế toàn vẹn tham chiếu, không để lại dữ liệu vô chủ. & Đạt \\ \hline
+\end{tabularx}
+\caption{Kịch bản kiểm thử ràng buộc Khóa ngoại và Toàn vẹn tham chiếu}
+\end{table}
+
+\subsection{Kịch bản kiểm thử ràng buộc Check Constraints \& Giao dịch ACID}
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabularx}{\textwidth}{|l|p{3.5cm}|p{3.8cm}|p{3.8cm}|c|}
+\hline
+\textbf{Mã} & \textbf{Tên kiểm thử} & \textbf{Thao tác kiểm tra} & \textbf{Kết quả mong đợi} & \textbf{Trạng thái} \\ \hline
+DB-TC10 & Ràng buộc ngày hiệu lực hợp đồng & Nhập hợp đồng có \texttt{EndDate < StartDate}. & Kích hoạt lỗi vi phạm Check Constraint về ngày tháng. & Đạt \\ \hline
+DB-TC11 & Ràng buộc mức lương cơ bản & Nhập \texttt{BasicSalary = -5000000} hoặc phụ cấp âm. & Chặn bản ghi do vi phạm điều kiện \texttt{BasicSalary >= 0}. & Đạt \\ \hline
+DB-TC12 & Ràng buộc độ tuổi lao động & Thêm nhân viên tính đến nay chưa đủ 18 tuổi. & Service/CSDL chặn lưu, yêu cầu đủ từ 18 tuổi trở lên. & Đạt \\ \hline
+DB-TC13 & Tính toàn vẹn mảng byte ảnh & Lưu mảng byte BLOB dung lượng lớn vào cột \texttt{Avatar}. & Cột \texttt{VARBINARY(MAX)} lưu và đọc toàn vẹn chuỗi byte. & Đạt \\ \hline
+DB-TC14 & Giao dịch điều chuyển công tác & Thêm \texttt{WorkHistory} và cập nhật \texttt{Employee}; cố tình tạo lỗi bước 2. & Rollback toàn bộ giao dịch, không phát sinh lịch sử rác. & Đạt \\ \hline
+DB-TC15 & Giao dịch ký hợp đồng mới & Tạo hợp đồng mới và đổi trạng thái hợp đồng cũ; giả lập mất điện. & Hủy bỏ thay đổi chưa commit, dữ liệu nhất quán. & Đạt \\ \hline
+\end{tabularx}
+\caption{Kịch bản kiểm thử miền giá trị và giao dịch ACID}
+\end{table}
+
+\subsection*{Đánh giá tổng kết kiểm thử CSDL}
+Toàn bộ 15 kịch bản kiểm thử CSDL đều đạt kết quả mong đợi. SQL Server bảo vệ chặt chẽ các quy tắc nghiệp vụ ngay từ tầng lưu trữ, tạo điểm tựa tin cậy cho tầng Repositories và Services bên trên.
+
+\section{Kiểm thử tổng thể và Luồng giao diện (Integration Testing)}
+
+\subsection{Kiểm thử luồng Xác thực, Hồ sơ \& Tìm kiếm (Module 1)}
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabularx}{\textwidth}{|l|p{3.5cm}|p{3.8cm}|p{3.8cm}|c|}
+\hline
+\textbf{Mã} & \textbf{Tên kịch bản} & \textbf{Thao tác thực hiện} & \textbf{Kết quả mong đợi} & \textbf{Trạng thái} \\ \hline
+IT-01 & Đăng nhập tài khoản Admin & Nhập \texttt{admin}, đúng mật khẩu tại \texttt{FrmLogin}. & Đóng \texttt{FrmLogin}, mở \texttt{FrmMain} với đầy đủ quyền quản trị. & Đạt \\ \hline
+IT-02 & Đăng nhập tài khoản HR Staff & Đăng nhập bằng tài khoản nhân viên nhân sự. & Mở \texttt{FrmMain}, tự động ẩn menu Quản trị tài khoản. & Đạt \\ \hline
+IT-03 & Xác thực thất bại & Nhập sai mật khẩu hoặc để trống. & Báo lỗi trên giao diện, giữ nguyên form đăng nhập. & Đạt \\ \hline
+IT-04 & Thêm hồ sơ kèm ảnh thẻ & Nhập 2 Tab thông tin, chọn ảnh thẻ và bấm Lưu. & Validate hợp lệ, lưu ảnh vào CSDL, làm mới danh sách. & Đạt \\ \hline
+IT-05 & Tìm kiếm nhân sự đa tiêu chí & Nhập tên, chọn phòng ban Kỹ thuật, đang làm việc. & Lọc đúng nhân viên thỏa mãn tiêu chí trong dưới 0.5s. & Đạt \\ \hline
+IT-06 & Kiểm tra chuyển Tab lỗi & Để trống CCCD ở Tab 1, chuyển Tab 2 bấm Lưu. & Service bắt lỗi, tự động chuyển về Tab 1 cảnh báo. & Đạt \\ \hline
+\end{tabularx}
+\caption{Kiểm thử luồng Xác thực, Hồ sơ và Tìm kiếm}
+\end{table}
+
+\subsection{Kiểm thử luồng Danh mục, Hợp đồng \& Báo cáo (Module 2 \& 3)}
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabularx}{\textwidth}{|l|p{3.5cm}|p{3.8cm}|p{3.8cm}|c|}
+\hline
+\textbf{Mã} & \textbf{Tên kịch bản} & \textbf{Thao tác thực hiện} & \textbf{Kết quả mong đợi} & \textbf{Trạng thái} \\ \hline
+IT-07 & Đồng bộ cây sơ đồ TreeView & Thêm phòng ban mới trên danh mục. & Cây TreeView tự động nạp lại cấu trúc phân cấp mới. & Đạt \\ \hline
+IT-08 & Lọc nhân sự theo TreeView & Nhấp chuột vào một phòng ban trên cây. & Bảng bên cạnh hiển thị đúng danh sách nhân viên đơn vị đó. & Đạt \\ \hline
+IT-09 & Điều chuyển và ghi lịch sử & Nhập quyết định điều chuyển phòng ban mới. & Cập nhật phòng ban nhân viên và tạo dòng lịch sử đồng bộ. & Đạt \\ \hline
+IT-10 & Quét cảnh báo hợp đồng & Có hợp đồng còn thời hạn 20 ngày. & Tự động bật danh sách cảnh báo (15--30 ngày) trên màn hình. & Đạt \\ \hline
+IT-11 & In sơ yếu lý lịch ReportViewer & Chọn nhân viên, bấm In sơ yếu lý lịch. & Nạp chuẩn mẫu RDLC, hiển thị sắc nét thông tin và ảnh thẻ. & Đạt \\ \hline
+IT-12 & Xuất file Excel và PDF & Nhấn Export ra file .xlsx và .pdf. & Xuất file thành công, giữ nguyên phông chữ tiếng Việt và bảng biểu. & Đạt \\ \hline
+\end{tabularx}
+\caption{Kiểm thử luồng Danh mục, Hợp đồng và Báo cáo}
+\end{table}
+
+\subsection*{Đánh giá tổng hợp kiểm thử tích hợp}
+Toàn bộ 12 ca kiểm thử tích hợp xuyên suốt các tầng kiến trúc đều Đạt (Pass), chứng minh các module do 3 thành viên lập trình khi ghép nối vào khung \texttt{FrmMain} vận hành hoàn toàn trơn tru và không xảy ra xung đột.
+
+% ==================== CHƯƠNG 6 ====================
+\chapter{TỔNG KẾT VÀ HƯỚNG PHÁT TRIỂN}
+
+\section{Kết quả đạt được}
+
+\subsection{So sánh kết quả thực tế với mục tiêu ban đầu}
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabularx}{\textwidth}{|p{3.5cm}|p{4.0cm}|p{5.5cm}|c|}
+\hline
+\textbf{Phân hệ} & \textbf{Mục tiêu ban đầu} & \textbf{Kết quả thực tế đạt được} & \textbf{Đánh giá} \\ \hline
+\textbf{Hệ thống \& Phân quyền} & Đăng nhập an toàn; phân quyền Admin và HR Staff. & Hoàn thành \texttt{FrmLogin}, phân quyền chặt chẽ trên menu qua \texttt{SessionManager}. & Đạt 100\% \\ \hline
+\textbf{Hồ sơ nhân sự} & Quản lý TabControl; lưu ảnh thẻ; bộ lọc tìm kiếm. & \texttt{FrmEmployeeDetail} 2 Tab trực quan; xử lý ảnh BLOB/đường dẫn; tìm kiếm đa tiêu chí. & Đạt 100\% \\ \hline
+\textbf{Tổ chức \& Công tác} & CRUD phòng ban/chức vụ; theo dõi lịch sử; TreeView. & Quản trị danh mục nền tảng; lưu vết biến động qua Transaction; sơ đồ cây TreeView trực quan. & Đạt 100\% \\ \hline
+\textbf{Hợp đồng lao động} & Quản lý hợp đồng; cảnh báo hết hạn (15--30 ngày). & Quản lý đầy đủ điều khoản pháp lý; tự động quét và bôi màu cảnh báo trực quan. & Đạt 100\% \\ \hline
+\textbf{Báo cáo \& In ấn} & In ReportViewer; xuất file Excel và PDF. & Kết xuất sơ yếu lý lịch có ảnh thẻ; xuất danh sách theo phòng ban ra Excel/PDF chuẩn mực. & Đạt 100\% \\ \hline
+\textbf{Tài liệu \& Quản lý Git} & Repo public; commit đều 3 người; báo cáo chuẩn. & Quản lý Git theo nhánh tính năng minh bạch; báo cáo học thuật bằng LaTeX chuẩn cấu trúc. & Đạt 100\% \\ \hline
+\end{tabularx}
+\caption{Bảng đối chiếu kết quả thực tế với mục tiêu ban đầu}
+\end{table}
+
+\subsection{Xác nhận mức độ tuân thủ kiến trúc MVP và các chuẩn thiết kế}
+Nhóm xác nhận phần mềm tuân thủ nghiêm ngặt chuẩn kiến trúc đã cam kết:
+\begin{enumerate}[leftmargin=1.0cm]
+    \item \textbf{Triệt tiêu sự phụ thuộc trực tiếp (Loose Coupling):} Mọi Form WinForms đều là Passive View thực thi \texttt{IView}. Các lớp Presenter chỉ giao tiếp qua Interface trừu tượng, hoàn toàn không chứa bất kỳ tham chiếu nào tới các điều khiển WinForms đồ họa.
+    \item \textbf{Đảm bảo nguyên lý Đơn nhiệm (SRP):} View chỉ hiển thị; Presenter điều phối; Service xử lý quy tắc nghiệp vụ; Repository chịu trách nhiệm đọc/ghi dữ liệu SQL Server; Model đóng gói thực thể.
+    \item \textbf{Mở rộng bền vững với Repository và Service Layer:} Giúp tách rời hoàn toàn truy vấn ADO.NET khỏi giao diện, tạo điều kiện thuận lợi cho việc kiểm thử tự động và bảo trì mã nguồn trong dài hạn.
+\end{enumerate}
+
+\section{Hạn chế của hệ thống}
+\begin{itemize}[leftmargin=1.0cm]
+    \item \textbf{Nghiệp vụ chuyên sâu:} Chưa tích hợp máy chấm công tự động (vân tay, khuôn mặt); chưa có bảng tính lương tự động khấu trừ thuế TNCN/BHXH chi tiết; thiếu quy trình tạo đơn và phê duyệt nghỉ phép trực tuyến đa cấp.
+    \item \textbf{Nền tảng công nghệ:} Ứng dụng Desktop WinForms chỉ chạy trên hệ điều hành Windows, chưa hỗ trợ truy cập từ xa qua Web hay thiết bị di động; cảnh báo hợp đồng phụ thuộc vào việc mở ứng dụng (chưa có Windows Service chạy ngầm gửi email tự động).
+    \item \textbf{Trải nghiệm người dùng (UI/UX):} Giao diện WinForms mang phong cách cổ điển, khả năng co giãn độ phân giải cao (DPI Scaling trên màn hình 2K/4K) đôi khi cần tinh chỉnh thủ công.
+\end{itemize}
+
+\section{Hướng phát triển trong tương lai}
+\begin{enumerate}[leftmargin=1.0cm]
+    \item \textbf{Mở rộng nghiệp vụ quản trị nguồn nhân lực:} Tích hợp phần cứng máy chấm công mạng TCP/IP; xây dựng module tính lương tự động và xuất phiếu lương điện tử (Payslip); xây dựng cổng thông tin tự phục vụ cho nhân viên (Employee Self-Service -- ESS).
+    \item \textbf{Chuyển đổi nền tảng Web và Mobile:} Tái cấu trúc tầng Service/Repository thành RESTful Web API (ASP.NET Core) và xây dựng giao diện Web hiện đại (React/Next.js) kết hợp Mobile App (.NET MAUI/Flutter); xây dựng Background Service định kỳ gửi email nhắc nhở hợp đồng sắp hết hạn.
+    \item \textbf{Hiện đại hóa giao diện và ứng dụng AI:} Nâng cấp giao diện với WPF hoặc các bộ thư viện Fluent UI hiện đại; tích hợp trí tuệ nhân tạo (OCR) tự động quét và trích xuất thông tin từ thẻ CCCD hoặc CV ứng viên vào form nhập liệu.
+\end{enumerate}
+
+% ==================== TÀI LIỆU THAM KHẢO ====================
+\chapter*{TÀI LIỆU THAM KHẢO}
+\addcontentsline{toc}{chapter}{TÀI LIỆU THAM KHẢO}
+
+\section*{Sách và Giáo trình (Books \& Textbooks)}
+\begin{enumerate}[leftmargin=1.0cm]
+    \item Ben-Gan, I. (2016). \textit{T-SQL Fundamentals} (3rd ed.). Microsoft Press.
+    \item Fowler, M. (2002). \textit{Patterns of enterprise application architecture}. Addison-Wesley Professional.
+    \item Freeman, A. (2010). \textit{Pro .NET Best Practices}. Apress. \url{https://doi.org/10.1007/978-1-4302-3347-3}
+    \item Gamma, E., Helm, R., Johnson, R., \& Vlissides, J. (1994). \textit{Design patterns: Elements of reusable object-oriented software}. Addison-Wesley.
+    \item Martin, R. C. (2017). \textit{Clean architecture: A craftsman's guide to software structure and design}. Prentice Hall.
+    \item Petzold, C. (2005). \textit{Programming Microsoft Windows Forms}. Microsoft Press.
+    \item Price, M. J. (2021). \textit{C\# 10 and .NET 6 -- Modern cross-platform development} (6th ed.). Packt Publishing.
+    \item Skeet, J. (2019). \textit{C\# in depth} (4th ed.). Manning Publications.
+    \item Troelsen, A., \& Japikse, P. (2022). \textit{Pro C\# 10 with .NET 6: Foundational principles and practices in programming} (11th ed.). Apress. \url{https://doi.org/10.1007/978-1-4842-7869-7}
+\end{enumerate}
+
+\section*{Tài liệu trực tuyến và Kỹ thuật chính thức (Online \& Technical Documentation)}
+\begin{enumerate}[resume, leftmargin=1.0cm]
+    \item Microsoft. (2023, November 15). \textit{Architectural patterns: Model-View-Presenter (MVP)}. Microsoft Learn. \url{https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff649571(v=pandp.10)}
+    \item Microsoft. (2024, January 10). \textit{C\# documentation: Get started, tutorials, reference}. Microsoft Learn. \url{https://learn.microsoft.com/en-us/dotnet/csharp/}
+    \item Microsoft. (2024, March 5). \textit{Windows Forms documentation}. Microsoft Learn. \url{https://learn.microsoft.com/en-us/dotnet/desktop/winforms/}
+    \item Microsoft. (2024, May 22). \textit{SQL Server technical documentation}. Microsoft Learn. \url{https://learn.microsoft.com/en-us/sql/sql-server/}
+    \item Microsoft. (2024, June 18). \textit{Microsoft.Reporting.WinForms namespace (ReportViewer control)}. Microsoft Learn. \url{https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2010/ms251671(v=vs.100)}
+\end{enumerate}
+
+\section*{Văn bản quy phạm pháp luật (Legal Documents \& Standards)}
+\begin{enumerate}[resume, leftmargin=1.0cm]
+    \item Quốc hội nước Cộng hòa xã hội chủ nghĩa Việt Nam. (2019). \textit{Bộ luật Lao động} (Luật số 45/2019/QH14). Cổng Thông tin điện tử Chính phủ. \url{https://vanban.chinhphu.vn/}
+\end{enumerate}
+
+\end{document}
