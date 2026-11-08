@@ -62,4 +62,4 @@ Hệ thống cho phép quản lý chi tiết từ thông tin cá nhân, ảnh đ
 1. **Clone repository này về máy:**
    
 ```bash
-   git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+   git clone [https://github.com/khoidangDSA/Nhom02_QuanLyNhanSu.git]
