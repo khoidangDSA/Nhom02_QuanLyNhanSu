@@ -1,6 +1,8 @@
 ﻿using Nhom2_QuanLyNhanSu.Views.Interfaces;
 using System;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Nhom2_QuanLyNhanSu.Views.Forms
@@ -12,6 +14,10 @@ namespace Nhom2_QuanLyNhanSu.Views.Forms
 
         private bool _isSuccessful;
         private string _message;
+
+        // Lưu đường dẫn file ảnh gốc được người dùng chọn từ máy tính
+        private string _selectedSourceImagePath = string.Empty;
+        private string _avatarPath = string.Empty;
 
         public FrmEmployeeDetail()
         {
@@ -28,21 +34,28 @@ namespace Nhom2_QuanLyNhanSu.Views.Forms
                 cmbGioiTinh.Items.AddRange(new object[] { "Nam", "Nữ" });
             }
             if (cmbGioiTinh.SelectedIndex < 0) cmbGioiTinh.SelectedIndex = 0;
-
-            // Thiết lập trạng thái nếu có cmbTrangThai trên Designer
-            // (0: Đang làm việc, 1: Đã nghỉ việc, 2: Nghỉ dài hạn)
         }
 
         private void AssociateAndRaiseViewEvents()
         {
-            // Nút Lưu: Chỉ đóng khi Presenter lưu thành công
+            // Nút Lưu: Xử lý lưu ảnh vào thư mục Images trước, rồi mới bắn SaveEvent để Presenter lưu vào CSDL
             btnSave.Click += delegate
             {
+                SaveAvatarImage();
+
+                // KIỂM TRA TẠM: Nếu hiện ra chuỗi rỗng tức là SaveAvatarImage() chưa chạy thành công
+                MessageBox.Show("AvatarPath hiện tại: [" + AvatarPath + "]", "Kiểm tra View");
+
                 SaveEvent?.Invoke(this, EventArgs.Empty);
+
                 if (_isSuccessful)
                 {
                     this.DialogResult = DialogResult.OK;
                     this.Close();
+                }
+                else if (!string.IsNullOrEmpty(_message))
+                {
+                    MessageBox.Show(_message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             };
 
@@ -54,19 +67,77 @@ namespace Nhom2_QuanLyNhanSu.Views.Forms
                 this.Close();
             };
 
-            // Tải ảnh đại diện
+            // Nút Tải ảnh lên
             btnUploadImage.Click += (s, e) =>
             {
                 using (OpenFileDialog ofd = new OpenFileDialog())
                 {
-                    ofd.Filter = "Image Files (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp";
+                    ofd.Title = "Chọn ảnh đại diện nhân viên";
+                    ofd.Filter = "Ảnh (*.jpg;*.jpeg;*.png;*.bmp)|*.jpg;*.jpeg;*.png;*.bmp";
+
                     if (ofd.ShowDialog() == DialogResult.OK)
                     {
-                        picAvatar.Image = Image.FromFile(ofd.FileName);
-                        AvatarPath = ofd.FileName;
+                        try
+                        {
+                            _selectedSourceImagePath = ofd.FileName;
+
+                            // Đọc dữ liệu ra MemoryStream để giải phóng ngay file gốc trên đĩa cứng
+                            byte[] imageBytes = File.ReadAllBytes(_selectedSourceImagePath);
+                            using (MemoryStream ms = new MemoryStream(imageBytes))
+                            {
+                                if (picAvatar.Image != null)
+                                {
+                                    picAvatar.Image.Dispose();
+                                    picAvatar.Image = null;
+                                }
+                                picAvatar.Image = Image.FromStream(ms);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Không thể tải ảnh: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             };
+        }
+
+        /// <summary>
+        /// Sao chép tệp ảnh đã chọn vào thư mục Images của ứng dụng và cập nhật lại AvatarPath
+        /// </summary>
+        private void SaveAvatarImage()
+        {
+            // Nếu không chọn ảnh mới từ máy tính thì không làm gì cả
+            if (string.IsNullOrEmpty(_selectedSourceImagePath) || !File.Exists(_selectedSourceImagePath))
+            {
+                return;
+            }
+
+            try
+            {
+                // Tạo thư mục Images trong thư mục build chạy ứng dụng
+                string folderImages = Path.Combine(Application.StartupPath, "Images");
+                if (!Directory.Exists(folderImages))
+                {
+                    Directory.CreateDirectory(folderImages);
+                }
+
+                // Tạo tên file: ví dụ NV001_20261110.png để tránh trùng và tránh bị khóa file
+                string extension = Path.GetExtension(_selectedSourceImagePath);
+                string safeCode = string.IsNullOrWhiteSpace(MaNV) ? "EMP" : MaNV;
+                string newFileName = $"{safeCode}_{DateTime.Now:yyyyMMddHHmmss}{extension}";
+                string destinationPath = Path.Combine(folderImages, newFileName);
+
+                // Copy file ảnh mới sang thư mục đích
+                File.Copy(_selectedSourceImagePath, destinationPath, true);
+
+                // Cập nhật lại AvatarPath để Presenter lấy giá trị này lưu xuống Database
+                this.AvatarPath = newFileName;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi sao chép tệp ảnh: " + ex.Message, "Lỗi lưu ảnh", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // --- CÁC THUỘC TÍNH (PROPERTIES) CHUẨN CSDL ---
@@ -155,7 +226,53 @@ namespace Nhom2_QuanLyNhanSu.Views.Forms
             set => cmbChucVu.SelectedValue = value;
         }
 
-        public string AvatarPath { get; set; }
+        public string AvatarPath
+        {
+            get => _avatarPath;
+            set
+            {
+                _avatarPath = value;
+
+                if (!string.IsNullOrEmpty(_avatarPath))
+                {
+                    // Kiểm tra đường dẫn tuyệt đối hoặc tương đối trong thư mục Images
+                    string fullPath = Path.IsPathRooted(_avatarPath)
+                        ? _avatarPath
+                        : Path.Combine(Application.StartupPath, "Images", _avatarPath);
+
+                    if (File.Exists(fullPath))
+                    {
+                        try
+                        {
+                            if (picAvatar.Image != null)
+                            {
+                                picAvatar.Image.Dispose();
+                                picAvatar.Image = null;
+                            }
+
+                            // Đọc qua byte array để không lock file
+                            byte[] bytes = File.ReadAllBytes(fullPath);
+                            using (MemoryStream ms = new MemoryStream(bytes))
+                            {
+                                picAvatar.Image = Image.FromStream(ms);
+                            }
+                        }
+                        catch
+                        {
+                            picAvatar.Image = null;
+                        }
+                        return;
+                    }
+                }
+
+                // Nếu không có ảnh hoặc đường dẫn không tồn tại
+                if (picAvatar.Image != null)
+                {
+                    picAvatar.Image.Dispose();
+                    picAvatar.Image = null;
+                }
+            }
+        }
 
         public bool IsSuccessful
         {

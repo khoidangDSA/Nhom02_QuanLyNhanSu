@@ -18,6 +18,7 @@ namespace Nhom2_QuanLyNhanSu.Services
                        e.BirthDate, e.IdCard, e.Phone, e.Email, e.Address,
                        d.Name AS DepartmentName, p.Name AS PositionName, 
                        e.DepartmentId, e.PositionId, e.HireDate, e.Status,
+                       e.PhotoPath,
                        CASE e.Status
                            WHEN 0 THEN N'Đang làm việc'
                            WHEN 1 THEN N'Đã nghỉ việc'
@@ -45,6 +46,7 @@ namespace Nhom2_QuanLyNhanSu.Services
                        e.BirthDate, e.IdCard, e.Phone, e.Email, e.Address,
                        d.Name AS DepartmentName, p.Name AS PositionName, 
                        e.DepartmentId, e.PositionId, e.HireDate, e.Status,
+                       e.PhotoPath,
                        CASE e.Status
                            WHEN 0 THEN N'Đang làm việc'
                            WHEN 1 THEN N'Đã nghỉ việc'
@@ -66,14 +68,14 @@ namespace Nhom2_QuanLyNhanSu.Services
 
         public bool Add(string code, string fullName, int gender, DateTime birthDate, string idCard,
                         string phone, string email, string address, int departmentId, int positionId,
-                        DateTime hireDate, int status)
+                        DateTime hireDate, int status, string photoPath)
         {
             using var conn = DbConnectionFactory.Create();
             using var cmd = new SqlCommand(@"
                 INSERT INTO Employee (Code, FullName, Gender, BirthDate, IdCard, Phone, Email, Address, 
-                                      DepartmentId, PositionId, HireDate, Status)
+                                      DepartmentId, PositionId, HireDate, Status, PhotoPath)
                 VALUES (@Code, @FullName, @Gender, @BirthDate, @IdCard, @Phone, @Email, @Address, 
-                        @DepartmentId, @PositionId, @HireDate, @Status)", conn);
+                        @DepartmentId, @PositionId, @HireDate, @Status, @PhotoPath)", conn);
 
             cmd.Parameters.AddWithValue("@Code", code);
             cmd.Parameters.AddWithValue("@FullName", fullName);
@@ -87,6 +89,7 @@ namespace Nhom2_QuanLyNhanSu.Services
             cmd.Parameters.AddWithValue("@PositionId", positionId);
             cmd.Parameters.AddWithValue("@HireDate", hireDate.Date);
             cmd.Parameters.AddWithValue("@Status", status);
+            cmd.Parameters.AddWithValue("@PhotoPath", string.IsNullOrWhiteSpace(photoPath) ? DBNull.Value : photoPath);
 
             conn.Open();
             return cmd.ExecuteNonQuery() > 0;
@@ -94,7 +97,7 @@ namespace Nhom2_QuanLyNhanSu.Services
 
         public bool Update(int id, string code, string fullName, int gender, DateTime birthDate, string idCard,
                            string phone, string email, string address, int departmentId, int positionId,
-                           DateTime hireDate, int status)
+                           DateTime hireDate, int status, string photoPath)
         {
             using var conn = DbConnectionFactory.Create();
             using var cmd = new SqlCommand(@"
@@ -110,7 +113,8 @@ namespace Nhom2_QuanLyNhanSu.Services
                     DepartmentId = @DepartmentId,
                     PositionId = @PositionId,
                     HireDate = @HireDate,
-                    Status = @Status
+                    Status = @Status,
+                    PhotoPath = @PhotoPath
                 WHERE Id = @Id", conn);
 
             cmd.Parameters.AddWithValue("@Id", id);
@@ -126,6 +130,7 @@ namespace Nhom2_QuanLyNhanSu.Services
             cmd.Parameters.AddWithValue("@PositionId", positionId);
             cmd.Parameters.AddWithValue("@HireDate", hireDate.Date);
             cmd.Parameters.AddWithValue("@Status", status);
+            cmd.Parameters.AddWithValue("@PhotoPath", string.IsNullOrWhiteSpace(photoPath) ? DBNull.Value : photoPath);
 
             conn.Open();
             return cmd.ExecuteNonQuery() > 0;

@@ -88,6 +88,20 @@ namespace Nhom2_QuanLyNhanSu.Views.Forms
                 dgvWorkHistory.Columns["ToPositionName"].HeaderText = "Chức vụ mới";
             if (dgvWorkHistory.Columns.Contains("Note"))
                 dgvWorkHistory.Columns["Note"].HeaderText = "Ghi chú";
+            string[] hiddenColumns = {
+                "FromDepartmentId", "FromDepartment",
+                "ToDepartmentId", "ToDepartment",
+                "FromPositionId", "FromPosition",
+                "ToPositionId", "ToPosition"
+            };
+
+            foreach (var colName in hiddenColumns)
+            {
+                if (dgvWorkHistory.Columns.Contains(colName))
+                {
+                    dgvWorkHistory.Columns[colName].Visible = false;
+                }
+            }
         }
     }
 }

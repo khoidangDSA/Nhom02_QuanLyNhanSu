@@ -78,7 +78,61 @@ namespace Nhom2_QuanLyNhanSu.Presenters
 
         private void AddNewEmployee(object sender, EventArgs e)
         {
-            MessageBox.Show("Mở form thêm mới nhân viên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                var detailForm = new FrmEmployeeDetail();
+                detailForm.IsEdit = false;
+                detailForm.Text = "Thêm mới nhân viên";
+
+                // Nạp danh mục Phòng ban và Chức vụ
+                detailForm.SetPhongBanList(_service.GetDepartments(), "Name", "Id");
+                detailForm.SetChucVuList(_service.GetPositions(), "Name", "Id");
+
+                detailForm.SaveEvent += (s, ev) =>
+                {
+                    try
+                    {
+                        // Gọi service thêm mới nhân viên có truyền AvatarPath
+                        // (Nếu IEmployeeService có hàm Add hoặc Insert tương tự)
+                        bool success = _service.Update(
+                            0,
+                            detailForm.MaNV,
+                            detailForm.HoTen,
+                            detailForm.GioiTinh,
+                            detailForm.NgaySinh,
+                            detailForm.CCCD,
+                            detailForm.DienThoai,
+                            detailForm.Email,
+                            detailForm.DiaChi,
+                            detailForm.PhongBanId,
+                            detailForm.ChucVuId,
+                            detailForm.NgayVaoLam,
+                            detailForm.TrangThai,
+                            detailForm.AvatarPath // <-- TRUYỀN ĐƯỜNG DẪN ẢNH
+                        );
+
+                        detailForm.IsSuccessful = success;
+                        if (success)
+                        {
+                            MessageBox.Show("Thêm mới nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        detailForm.IsSuccessful = false;
+                        MessageBox.Show("Lỗi thêm nhân viên: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                };
+
+                if (detailForm.ShowDialog() == DialogResult.OK)
+                {
+                    LoadAllEmployeeList();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi mở form thêm mới: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void EditEmployee(object sender, EventArgs e)
@@ -89,7 +143,107 @@ namespace Nhom2_QuanLyNhanSu.Presenters
                 return;
             }
 
-            MessageBox.Show("Mở form chỉnh sửa nhân viên.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                var row = (DataRowView)_employeeBindingSource.Current;
+                var detailForm = new FrmEmployeeDetail();
+                detailForm.IsEdit = true;
+                detailForm.Text = "Cập nhật hồ sơ nhân viên";
+
+                // 1. Nạp danh mục Phòng ban và Chức vụ vào ComboBox
+                detailForm.SetPhongBanList(_service.GetDepartments(), "Name", "Id");
+                detailForm.SetChucVuList(_service.GetPositions(), "Name", "Id");
+
+                // 2. Đổ dữ liệu từ dòng đang chọn lên Form chi tiết
+                detailForm.Id = Convert.ToInt32(row["Id"]);
+                detailForm.MaNV = row["Code"]?.ToString() ?? "";
+                detailForm.HoTen = row["FullName"]?.ToString() ?? "";
+
+                if (row.Row.Table.Columns.Contains("Gender") && row["Gender"] != DBNull.Value)
+                {
+                    detailForm.GioiTinh = Convert.ToInt32(row["Gender"]);
+                }
+                else if (row.Row.Table.Columns.Contains("GenderStr") && row["GenderStr"] != DBNull.Value)
+                {
+                    detailForm.GioiTinh = row["GenderStr"].ToString().Trim().Equals("Nữ", StringComparison.OrdinalIgnoreCase) ? 1 : 0;
+                }
+
+                if (row["BirthDate"] != DBNull.Value && DateTime.TryParse(row["BirthDate"].ToString(), out DateTime bDate))
+                    detailForm.NgaySinh = bDate;
+
+                detailForm.CCCD = row["IdCard"]?.ToString() ?? "";
+                detailForm.DienThoai = row["Phone"]?.ToString() ?? "";
+                detailForm.Email = row["Email"]?.ToString() ?? "";
+                detailForm.DiaChi = row["Address"]?.ToString() ?? "";
+
+                if (row["DepartmentId"] != DBNull.Value)
+                    detailForm.PhongBanId = Convert.ToInt32(row["DepartmentId"]);
+
+                if (row["PositionId"] != DBNull.Value)
+                    detailForm.ChucVuId = Convert.ToInt32(row["PositionId"]);
+
+                if (row["HireDate"] != DBNull.Value && DateTime.TryParse(row["HireDate"].ToString(), out DateTime hDate))
+                    detailForm.NgayVaoLam = hDate;
+
+                if (row["Status"] != DBNull.Value)
+                    detailForm.TrangThai = Convert.ToInt32(row["Status"]);
+
+                // BỔ SUNG: Nạp lại ảnh cũ nếu bảng có cột PhotoPath
+                if (row.Row.Table.Columns.Contains("PhotoPath") && row["PhotoPath"] != DBNull.Value)
+                {
+                    detailForm.AvatarPath = row["PhotoPath"].ToString();
+                }
+
+                // 3. Đăng ký sự kiện Lưu khi người dùng bấm nút Lưu trên Form chi tiết
+                detailForm.SaveEvent += (s, ev) =>
+                {
+                    try
+                    {
+                        // TRUYỀN THÊM detailForm.AvatarPath VÀO HÀM UPDATE
+                        bool success = _service.Update(
+                            detailForm.Id,
+                            detailForm.MaNV,
+                            detailForm.HoTen,
+                            detailForm.GioiTinh,
+                            detailForm.NgaySinh,
+                            detailForm.CCCD,
+                            detailForm.DienThoai,
+                            detailForm.Email,
+                            detailForm.DiaChi,
+                            detailForm.PhongBanId,
+                            detailForm.ChucVuId,
+                            detailForm.NgayVaoLam,
+                            detailForm.TrangThai,
+                            detailForm.AvatarPath // <-- ĐÃ BỔ SUNG THAM SỐ ẢNH
+                        );
+
+                        detailForm.IsSuccessful = success;
+                        if (success)
+                        {
+                            MessageBox.Show("Cập nhật thông tin nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không thể cập nhật hồ sơ nhân viên. Vui lòng kiểm tra lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        detailForm.IsSuccessful = false;
+                        MessageBox.Show("Lỗi cập nhật CSDL: " + ex.Message, "Lỗi CSDL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                };
+
+                // 4. Hiển thị form dưới dạng Dialog và tải lại danh sách nếu đã cập nhật
+                if (detailForm.ShowDialog() == DialogResult.OK)
+                {
+                    LoadAllEmployeeList();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi mở form chỉnh sửa: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void DeleteEmployee(object sender, EventArgs e)

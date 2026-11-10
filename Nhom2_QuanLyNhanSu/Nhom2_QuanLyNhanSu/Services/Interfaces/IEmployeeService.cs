@@ -7,12 +7,15 @@ namespace Nhom2_QuanLyNhanSu.Services.Interfaces
     {
         DataTable GetAll();
         DataTable GetByValue(string keyword);
+
         bool Add(string code, string fullName, int gender, DateTime birthDate, string idCard,
                  string phone, string email, string address, int departmentId, int positionId,
-                 DateTime hireDate, int status);
+                 DateTime hireDate, int status, string photoPath);
+
         bool Update(int id, string code, string fullName, int gender, DateTime birthDate, string idCard,
                     string phone, string email, string address, int departmentId, int positionId,
-                    DateTime hireDate, int status);
+                    DateTime hireDate, int status, string photoPath);
+
         bool Delete(int id);
         DataTable GetDepartments();
         DataTable GetPositions();
